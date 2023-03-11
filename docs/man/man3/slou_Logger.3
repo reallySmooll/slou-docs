@@ -1,0 +1,190 @@
+.TH "slou::Logger" 3 "Sat Mar 11 2023" "Version v1.0.0" "slou" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+slou::Logger \- Main class creates the logger that logs everything to the screen and/or file\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <slou\&.hpp>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBLogger\fP (std::string \fBprojectName\fP='slou', const char *\fBformat\fP='%X', bool \fBshouldLogToFile\fP=true, bool \fBshouldLogToScreen\fP=false, std::string \fBlogFilename\fP='slou\&.log')"
+.br
+.RI "Default \fBLogger\fP class constructor that initializes all passed in variables for use\&. "
+.ti -1c
+.RI "\fB~Logger\fP ()"
+.br
+.RI "Default \fBLogger\fP class deconstructor\&. "
+.ti -1c
+.RI "void \fBLog\fP (std::string level, std::string message)"
+.br
+.RI "Function logs the passed in message variable to the terminal and/or a file\&. "
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "const std::string \fBSUCCESS\fP = 'SUCCESS'"
+.br
+.RI "Success level indicates that an operation was successful\&. "
+.ti -1c
+.RI "const std::string \fBINFO\fP = 'INFO'"
+.br
+.RI "Info level displays basic information\&. "
+.ti -1c
+.RI "const std::string \fBWARNING\fP = 'WARNING'"
+.br
+.RI "Warning level indicates that there's something wrong with the program but doesn't require immediate attention\&. "
+.ti -1c
+.RI "const std::string \fBERROR\fP = 'ERROR'"
+.br
+.RI "Error level indicates that there's something wrong with the program requires attention\&. "
+.ti -1c
+.RI "const std::string \fBCRITICAL\fP = 'CRITICAL'"
+.br
+.RI "Critical level indicates that there's something wrong with the program and requires immediate attention\&. "
+.ti -1c
+.RI "std::string \fBprojectName\fP"
+.br
+.RI "Name of your project\&. (defaults to 'slou') "
+.ti -1c
+.RI "const char * \fBformat\fP"
+.br
+.RI "Date and/or time format\&. (defaults to '%X', which means the current hour, minute and second) "
+.ti -1c
+.RI "bool \fBshouldLogToFile\fP"
+.br
+.RI "Should the logger put logs to a file\&. (defaults to 'true') "
+.ti -1c
+.RI "bool \fBshouldLogToScreen\fP"
+.br
+.RI "Should the logger display logs to a screen\&. (defaults to 'false') "
+.ti -1c
+.RI "std::string \fBlogFilename\fP"
+.br
+.RI "Path and name of the log file\&. (defaults to 'slou\&.log') "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Main class creates the logger that logs everything to the screen and/or file\&. 
+.PP
+Definition at line \fB28\fP of file \fBslou\&.hpp\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "slou::Logger::Logger (std::string projectName = \fC'slou'\fP, const char * format = \fC'%X'\fP, bool shouldLogToFile = \fCtrue\fP, bool shouldLogToScreen = \fCfalse\fP, std::string logFilename = \fC'slou\&.log'\fP)\fC [explicit]\fP"
+
+.PP
+Default \fBLogger\fP class constructor that initializes all passed in variables for use\&. The constructor checks if the log file exists and if it does, the constructor removes the file\&.
+.PP
+For more ways of formatting the date and time, check out: https://cplusplus.com/reference/ctime/strftime/
+.PP
+\fBParameters\fP
+.RS 4
+\fIprojectName\fP string representing the project name\&. (defaults to 'slou') 
+.br
+\fIformat\fP string representing the date and/or time format\&. (defaults to '%X' which means the current hour, minute and second) 
+.br
+\fIshouldLogToFile\fP boolean representing the need to log to a file\&. (defaults to 'true') 
+.br
+\fIshouldLogToScreen\fP boolean representing the need to log to the screen\&. (defaults to 'false') 
+.br
+\fIlogFilename\fP string representing the path and name of the log file\&. (defaults to 'slou\&.log') 
+.RE
+.PP
+
+.PP
+Definition at line \fB25\fP of file \fBslou\&.cpp\fP\&.
+.SS "slou::Logger::~Logger ()"
+
+.PP
+Default \fBLogger\fP class deconstructor\&. The deconstructor does nothing\&. 
+.PP
+Definition at line \fB40\fP of file \fBslou\&.cpp\fP\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void slou::Logger::Log (std::string level, std::string message)"
+
+.PP
+Function logs the passed in message variable to the terminal and/or a file\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIlevel\fP string representing the level of severity of the log message\&. 
+.br
+\fImessage\fP string representing the message that is supposed to be logged\&. 
+.RE
+.PP
+
+.PP
+Definition at line \fB47\fP of file \fBslou\&.cpp\fP\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "const std::string slou::Logger::CRITICAL = 'CRITICAL'"
+
+.PP
+Critical level indicates that there's something wrong with the program and requires immediate attention\&. 
+.PP
+Definition at line \fB40\fP of file \fBslou\&.hpp\fP\&.
+.SS "const std::string slou::Logger::ERROR = 'ERROR'"
+
+.PP
+Error level indicates that there's something wrong with the program requires attention\&. 
+.PP
+Definition at line \fB39\fP of file \fBslou\&.hpp\fP\&.
+.SS "const char* slou::Logger::format"
+
+.PP
+Date and/or time format\&. (defaults to '%X', which means the current hour, minute and second) 
+.PP
+Definition at line \fB44\fP of file \fBslou\&.hpp\fP\&.
+.SS "const std::string slou::Logger::INFO = 'INFO'"
+
+.PP
+Info level displays basic information\&. 
+.PP
+Definition at line \fB37\fP of file \fBslou\&.hpp\fP\&.
+.SS "std::string slou::Logger::logFilename"
+
+.PP
+Path and name of the log file\&. (defaults to 'slou\&.log') 
+.PP
+Definition at line \fB49\fP of file \fBslou\&.hpp\fP\&.
+.SS "std::string slou::Logger::projectName"
+
+.PP
+Name of your project\&. (defaults to 'slou') 
+.PP
+Definition at line \fB42\fP of file \fBslou\&.hpp\fP\&.
+.SS "bool slou::Logger::shouldLogToFile"
+
+.PP
+Should the logger put logs to a file\&. (defaults to 'true') 
+.PP
+Definition at line \fB46\fP of file \fBslou\&.hpp\fP\&.
+.SS "bool slou::Logger::shouldLogToScreen"
+
+.PP
+Should the logger display logs to a screen\&. (defaults to 'false') 
+.PP
+Definition at line \fB47\fP of file \fBslou\&.hpp\fP\&.
+.SS "const std::string slou::Logger::SUCCESS = 'SUCCESS'"
+
+.PP
+Success level indicates that an operation was successful\&. 
+.PP
+Definition at line \fB36\fP of file \fBslou\&.hpp\fP\&.
+.SS "const std::string slou::Logger::WARNING = 'WARNING'"
+
+.PP
+Warning level indicates that there's something wrong with the program but doesn't require immediate attention\&. 
+.PP
+Definition at line \fB38\fP of file \fBslou\&.hpp\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for slou from the source code\&.
