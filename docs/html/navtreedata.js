@@ -31,7 +31,7 @@ var NAVTREE =
     ] ],
     [ "Quickstart", "index.html#autotoc_md6", null ],
     [ "Release Notes", "md_CHANGELOG.html", [
-      [ "v1.0.0 | 11, mar. 2023", "md_CHANGELOG.html#autotoc_md2", null ]
+      [ "v1.0.0 | 11, mar. 2023", "md_CHANGELOG.html#autotoc_md1", null ]
     ] ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ]
