@@ -25,13 +25,13 @@
 var NAVTREE =
 [
   [ "slou", "index.html", [
-    [ "Installation", "index.html#autotoc_md1", [
-      [ "Dependencies", "index.html#autotoc_md2", null ],
-      [ "Building", "index.html#autotoc_md4", null ]
+    [ "Installation", "index.html#autotoc_md3", [
+      [ "Dependencies", "index.html#autotoc_md4", null ],
+      [ "Building", "index.html#autotoc_md5", null ]
     ] ],
     [ "Quickstart", "index.html#autotoc_md6", null ],
     [ "Release Notes", "md_CHANGELOG.html", [
-      [ "v1.0.0 | 11, mar. 2023", "md_CHANGELOG.html#autotoc_md5", null ]
+      [ "v1.0.0 | 11, mar. 2023", "md_CHANGELOG.html#autotoc_md2", null ]
     ] ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ]
