@@ -43,7 +43,7 @@ var NAVTREEINDEX0 =
 "index.html#autotoc_md5":[0,1],
 "index.html#autotoc_md6":[1],
 "md_CHANGELOG.html":[2],
-"md_CHANGELOG.html#autotoc_md1":[2,0],
+"md_CHANGELOG.html#autotoc_md2":[2,0],
 "namespaces.html":[3,0],
 "namespaceslou.html":[3,0,0],
 "pages.html":[],
