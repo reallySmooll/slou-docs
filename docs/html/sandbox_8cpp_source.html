@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.6"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>slou: include/slou/slou.hpp File Reference</title>
+<title>slou: src/sandbox.cpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -77,7 +77,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('slou_8hpp.html',''); initResizable(); });
+$(document).ready(function(){initNavTree('sandbox_8cpp_source.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -103,60 +103,29 @@ $(document).ready(function(){initNavTree('slou_8hpp.html',''); initResizable(); 
 </div>
 
 <div class="header">
-  <div class="summary">
-<a href="#nested-classes">Classes</a> &#124;
-<a href="#namespaces">Namespaces</a> &#124;
-<a href="#define-members">Macros</a>  </div>
-  <div class="headertitle"><div class="title">slou.hpp File Reference</div></div>
+  <div class="headertitle"><div class="title">sandbox.cpp</div></div>
 </div><!--header-->
 <div class="contents">
-
-<p>The most important file in this library.  
-<a href="#details">More...</a></p>
-<div class="textblock"><code>#include &lt;string&gt;</code><br />
-<code>#include &lt;fstream&gt;</code><br />
-</div>
-<p><a href="slou_8hpp_source.html">Go to the source code of this file.</a></p>
-<table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
-Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classslou_1_1Logger.html">slou::Logger</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Main class creates the logger that logs everything to the screen and/or file.  <a href="classslou_1_1Logger.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
-Namespaces</h2></td></tr>
-<tr class="memitem:namespaceslou"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceslou.html">slou</a></td></tr>
-<tr class="memdesc:namespaceslou"><td class="mdescLeft">&#160;</td><td class="mdescRight">"slou" namespace. <br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table>
-<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>The most important file in this library. </p>
-
-<p class="definition">Definition in file <a class="el" href="slou_8hpp_source.html">slou.hpp</a>.</p>
-</div><h2 class="groupheader">Macro Definition Documentation</h2>
-<a id="af056327533926d6690350e9f1cb2b501" name="af056327533926d6690350e9f1cb2b501"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af056327533926d6690350e9f1cb2b501">&#9670;&#160;</a></span>SLOU_PUBLIC</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define SLOU_PUBLIC</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="slou_8hpp_source.html#l00020">20</a> of file <a class="el" href="slou_8hpp_source.html">slou.hpp</a>.</p>
-
-</div>
-</div>
-</div><!-- contents -->
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#include &lt;<a class="code" href="slou_8hpp.html">include/slou/slou.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keywordtype">int</span> main()</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span>{</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span>    <a class="code hl_class" href="classslou_1_1Logger.html">slou::Logger</a> logger(<span class="stringliteral">&quot;slou&quot;</span>, <span class="stringliteral">&quot;%X&quot;</span>, <span class="keyword">true</span>, <span class="keyword">true</span>, <span class="stringliteral">&quot;slou.log&quot;</span>);</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>    logger.Log(logger.SUCCESS,  <span class="stringliteral">&quot;Successfully successed!&quot;</span>);</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>    logger.Log(logger.INFO,     <span class="stringliteral">&quot;Successfully info&#39;ed!&quot;</span>);</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>    logger.Log(logger.WARNING,  <span class="stringliteral">&quot;Successfully warned!&quot;</span>);</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    logger.Log(logger.ERROR,    <span class="stringliteral">&quot;Successfully error&#39;ed!&quot;</span>);</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    logger.Log(logger.CRITICAL, <span class="stringliteral">&quot;Successfully critical&#39;ed!&quot;</span>);</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>}</div>
+<div class="ttc" id="aclassslou_1_1Logger_html"><div class="ttname"><a href="classslou_1_1Logger.html">slou::Logger</a></div><div class="ttdoc">Main class creates the logger that logs everything to the screen and/or file.</div><div class="ttdef"><b>Definition:</b> <a href="slou_8hpp_source.html#l00028">slou.hpp:29</a></div></div>
+<div class="ttc" id="aslou_8hpp_html"><div class="ttname"><a href="slou_8hpp.html">slou.hpp</a></div><div class="ttdoc">The most important file in this library.</div></div>
+</div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_d26f53f2604508bc14dd6aaf1ce7c6ec.html">slou</a></li><li class="navelem"><a class="el" href="slou_8hpp.html">slou.hpp</a></li>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><b>sandbox.cpp</b></li>
     <li class="footer">Generated on Sun Mar 12 2023 17:50:12 for slou by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
   </ul>
 </div>

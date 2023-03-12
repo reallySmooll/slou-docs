@@ -169,7 +169,7 @@ $(document).ready(function(){initNavTree('slou_8cpp_source.html',''); initResiza
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>        localtime_s(&amp;tm_now, &amp;time_now);</div>
 <div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span><span class="preprocessor">#else</span></div>
 <div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>        localtime_r(&amp;time_now, &amp;tm_now);</div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span><span class="preprocessor">#endif </span><span class="comment">// _WIN32</span></div>
 <div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
 <div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>        std::stringstream ss;</div>
 <div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>        ss &lt;&lt; std::put_time(&amp;tm_now, <a class="code hl_variable" href="classslou_1_1Logger.html#a1179d7e5758cd775ae15201410e8f054">format</a>);</div>
@@ -198,7 +198,7 @@ $(document).ready(function(){initNavTree('slou_8cpp_source.html',''); initResiza
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="slou_8cpp.html">slou.cpp</a></li>
-    <li class="footer">Generated on Sat Mar 11 2023 22:10:02 for slou by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+    <li class="footer">Generated on Sun Mar 12 2023 17:50:12 for slou by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
   </ul>
 </div>
 </body>
