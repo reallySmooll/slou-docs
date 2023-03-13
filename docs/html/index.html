@@ -106,34 +106,34 @@ $(document).ready(function(){initNavTree('index.html',''); initResizable(); });
   <div class="headertitle"><div class="title">slou </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p><a class="anchor" id="md_README"></a><a href="https://www.github.com/reallySmooll/slou/blob/master/LICENSE"><img src="https://img.shields.io/static/v1?label=License&amp;message=MIT&amp;color=informational" alt="License" class="inline"/></a> <a href="https://www.github.com/reallySmooll/slou/blob/master/CHANGELOG.md"><img src="https://img.shields.io/static/v1?label=Version&amp;message=v1.0.0&amp;color=informational" alt="Version" class="inline"/></a> <a href="https://www.codacy.com/gh/reallySmooll/slou/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=reallySmooll/slou&amp;utm_campaign=Badge_Grade"><img src="https://app.codacy.com/project/badge/Grade/30c92ecea05f43a98c67c947f61bbcd3" alt="Codacy Badge" class="inline"/></a></p>
-<p>"Smooll" LOgging Utility (pronounced <code>slew</code> or <code>slow</code>).</p>
-<p><code>slou</code> is a simple logging library made in C++ that's easy to use and fast. It has moderate configuration that can be used in both small and big projects.</p>
-<h1><a class="anchor" id="autotoc_md16"></a>
+<div class="textblock"><p align="center"><a class="anchor" id="md_README"></a></p>
+<p><a href="https://www.github.com/reallySmooll/slou/blob/master/LICENSE" alt="License"><img src="https://img.shields.io/static/v1?label=License&amp;message=MIT&amp;color=informational" alt="" class="inline"/> </a> <a href="https://www.github.com/reallySmooll/slou/blob/master/CHANGELOG.md" alt="Version"><img src="https://img.shields.io/static/v1?label=Version&amp;message=v1.0.1&amp;color=informational" alt="" class="inline"/> </a> <a href="https://www.codacy.com/gh/reallySmooll/slou/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=reallySmooll/slou&amp;utm_campaign=Badge_Grade" alt="Codacy Badge"><img src="https://app.codacy.com/project/badge/Grade/30c92ecea05f43a98c67c947f61bbcd3" alt="" class="inline"/> </a> </p>
+<p>"Smooll" LOgging Utility (pronounced <code>slew</code>).</p>
+<p><code>slou</code> is a simple logging library made in C++ that's easy to use and fast. It has moderate configuration and can be used in both small and big projects.</p>
+<h1><a class="anchor" id="autotoc_md20"></a>
 Installation</h1>
-<p>The project uses the Meson build system which means that you can install your project on all platforms that are supported by Meson.</p>
+<p>slou uses the Meson build system which means that you can install your project on all platforms that are supported by Meson.</p>
 <p>Linux users can download a binary of the library on the <a href="https://www.github.com/reallySmooll/slou/releases">Releases</a> page.</p>
-<h2><a class="anchor" id="autotoc_md19"></a>
+<h2><a class="anchor" id="autotoc_md21"></a>
 Dependencies</h2>
-<p>The dependencies <code>slou</code> uses are basic dependencies used by any project:</p>
 <ul>
 <li>Meson</li>
 <li>git</li>
 <li>Doxygen (optional, if you want to help with documentation, install it)</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md21"></a>
+<h2><a class="anchor" id="autotoc_md23"></a>
 Building</h2>
-<p>Building the project is as easy as 1-2-3. The following commands are directed at Linux users but it should work for any operating system as Meson will generate the necessary files for building the project.</p>
+<p>Building slou is as easy as 1-2-3. The following commands are directed at Linux users but it should work for any operating system as Meson will generate the necessary files for building the project.</p>
 <div class="fragment"><div class="line">$ git clone https://github.com/reallySmooll/slou.git</div>
 <div class="line">$ cd slou/</div>
 <div class="line">$ meson setup build/</div>
 <div class="line">$ meson compile -C build/</div>
-</div><!-- fragment --><p>If you're on Linux and want to install the library system-wide, you can use these commands (after cloning the repository and entering the directory):</p>
+</div><!-- fragment --><p>If you're on Linux and want to install the library system-wide, you can use these commands (after cloning the repository and entering into the directory):</p>
 <div class="fragment"><div class="line">$ meson setup --prefix /usr build/</div>
 <div class="line">$ sudo meson install -C build</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md23"></a>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md25"></a>
 Quickstart</h1>
-<p><code>slou</code> was designed to be very easy to use. And as it is a small library it doesn't require anymore setup than this:</p>
+<p>slou was designed to be very easy to use. And as it is a small library it doesn't require anymore setup than this:</p>
 <div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="slou_8hpp.html">slou/slou.hpp</a>&gt;</span></div>
 <div class="line"> </div>
 <div class="line"><span class="keywordtype">int</span> main()</div>
@@ -148,16 +148,16 @@ Quickstart</h1>
 <div class="ttc" id="aclassslou_1_1Logger_html_a05818b88d3110524bd2e729b3a039d85"><div class="ttname"><a href="classslou_1_1Logger.html#a05818b88d3110524bd2e729b3a039d85">slou::Logger::INFO</a></div><div class="ttdeci">const std::string INFO</div><div class="ttdoc">Info level displays basic information.</div><div class="ttdef"><b>Definition:</b> <a href="slou_8hpp_source.html#l00037">slou.hpp:37</a></div></div>
 <div class="ttc" id="aclassslou_1_1Logger_html_a71e41ffbcfe472a6fed2119bcc78f000"><div class="ttname"><a href="classslou_1_1Logger.html#a71e41ffbcfe472a6fed2119bcc78f000">slou::Logger::Log</a></div><div class="ttdeci">void Log(std::string level, std::string message)</div><div class="ttdoc">Function logs the passed in message variable to the terminal and/or a file.</div><div class="ttdef"><b>Definition:</b> <a href="slou_8cpp_source.html#l00049">slou.cpp:49</a></div></div>
 <div class="ttc" id="aslou_8hpp_html"><div class="ttname"><a href="slou_8hpp.html">slou.hpp</a></div><div class="ttdoc">The most important file in this library.</div></div>
-</div><!-- fragment --><p>And that is the default setup for <code>slou</code>. The logs will be saved to a file called (by default) <code>slou.log</code> but the logs will not be displayed on the screen.</p>
+</div><!-- fragment --><p>That is the default setup for slou. The logs will be saved to a file called (by default) <code>slou.log</code> but the logs will not be displayed on the screen.</p>
 <p>You can obviously change this and customize it to your liking. If you'd like to see more you can check out the documentation <a href="https://reallysmooll.github.io/slou-docs">here</a>.</p>
-<h1><a class="anchor" id="autotoc_md24"></a>
+<h1><a class="anchor" id="autotoc_md27"></a>
 Contributing</h1>
 <p>If you'd like to contribute, please refer to the <a href="https://www.github.com/reallySmooll/slou/blob/master/CONTRIBUTING.md">contributing guide</a>.</p>
 <p>Here are some contributions:</p>
 <ul>
-<li>Seeing if you can build the library on Windows - Marcel Zdziechowicz (<a href="https://www.github.com/marcel-zdziechowicz">@marcel-zdziechowicz</a>)</li>
+<li>Testing on Windows - Marcel Zdziechowicz (<a href="https://www.github.com/marcel-zdziechowicz">@marcel-zdziechowicz</a>)</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md25"></a>
+<h1><a class="anchor" id="autotoc_md28"></a>
 Code of Conduct</h1>
 <p>If you'd like to see it, check out the <a href="https://www.github.com/reallySmooll/slou/blob/master/CODE_OF_CONDUCT.md">CODE_OF_CONDUCT.md</a>. </p>
 </div></div><!-- PageDoc -->
@@ -166,7 +166,7 @@ Code of Conduct</h1>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Sun Mar 12 2023 19:25:30 for slou by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+    <li class="footer">Generated on Mon Mar 13 2023 19:18:37 for slou by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
   </ul>
 </div>
 </body>
