@@ -161,6 +161,30 @@ This section will describe how to setup a development environment for working on
 slou uses \fCMeson\fP and \fCNinja\fP to build the project so make sure you have that\&. You can find instructions on how to install it \fChere\fP\&.
 .SS "Code editor"
 You can use any code editor for development, there aren't any requirements\&.
+.SS "Building"
+If you use Linux for compilation please compile for Windows as well\&. In the root directory there's a \fCwin64\&.crossfile\fP that you can use to compile for both Linux and Windows\&.
+.PP
+To compile execute these commands:
+.PP
+.PP
+.nf
+$ mkdir build/
+$ cd build/
+$ meson setup \-\-prefix /usr build\-linux\-x86_64/ \&.\&./
+$ meson setup \-\-cross\-file \&.\&./win64\&.crossfile build\-windows\-x86_64/ \&.\&./
+.fi
+.PP
+.PP
+And then to compile, while in the root directory:
+.PP
+.PP
+.nf
+$ meson compile \-C build/build\-linux\-x86_64/
+$ meson compile \-C build/build\-windows\-x86_64/
+.fi
+.PP
+.PP
+If you use Windows, for the time being you can only compile for Windows, which is good because the lead developer does not have a Windows computer and will not for some time\&. :)
 .SS "Improving The Documentation"
 As slou uses \fCDoxygen\fP for documentation, you really don't need to do much except for installing it and documenting the code properly\&.
 .SS "Styleguides"
