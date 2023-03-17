@@ -1,8 +1,8 @@
-.TH "slou::Logger" 3 "Mon Mar 13 2023" "Version v1.0.0" "slou" \" -*- nroff -*-
+.TH "slou::Logger" 3 "Fri Mar 17 2023" "Version v1.1.0" "slou" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-slou::Logger \- Main class creates the logger that logs everything to the screen and/or file\&.  
+slou::Logger \- Class creates the logger that logs everything to the screen and/or file\&.  
 
 .SH SYNOPSIS
 .br
@@ -13,7 +13,7 @@ slou::Logger \- Main class creates the logger that logs everything to the screen
 
 .in +1c
 .ti -1c
-.RI "\fBLogger\fP (std::string \fBprojectName\fP='slou', const char *\fBformat\fP='%X', bool \fBshouldLogToFile\fP=true, bool \fBshouldLogToScreen\fP=false, std::string \fBlogFilename\fP='slou\&.log')"
+.RI "\fBLogger\fP (std::string \fBprojectName\fP='slou', const char *\fBtimeFormat\fP='%X', bool \fBshouldLogToFile\fP=true, bool \fBshouldLogToScreen\fP=false, std::string \fBlogFilename\fP='slou\&.log', std::string format='{projectName} \- [{level}] ({time}): {message}')"
 .br
 .RI "Default \fBLogger\fP class constructor that initializes all passed in variables for use\&. "
 .ti -1c
@@ -24,6 +24,14 @@ slou::Logger \- Main class creates the logger that logs everything to the screen
 .RI "void \fBLog\fP (std::string level, std::string message)"
 .br
 .RI "Function logs the passed in message variable to the terminal and/or a file\&. "
+.ti -1c
+.RI "std::string \fBCurrentDateAndTime\fP (const char *\fBtimeFormat\fP)"
+.br
+.RI "Function gets the current date and time and displays it in the format passed to the variable\&. "
+.ti -1c
+.RI "std::string \fBFormat\fP (std::string format)"
+.br
+.RI "Function finds strings in a custom format and replaces them with variable values\&. "
 .in -1c
 .SS "Public Attributes"
 
@@ -53,7 +61,7 @@ slou::Logger \- Main class creates the logger that logs everything to the screen
 .br
 .RI "Name of your project\&. (defaults to 'slou') "
 .ti -1c
-.RI "const char * \fBformat\fP"
+.RI "const char * \fBtimeFormat\fP"
 .br
 .RI "Date and/or time format\&. (defaults to '%X', which means the current hour, minute and second) "
 .ti -1c
@@ -71,42 +79,79 @@ slou::Logger \- Main class creates the logger that logs everything to the screen
 .in -1c
 .SH "Detailed Description"
 .PP 
-Main class creates the logger that logs everything to the screen and/or file\&. 
+Class creates the logger that logs everything to the screen and/or file\&. 
 .PP
 Definition at line \fB28\fP of file \fBslou\&.hpp\fP\&.
 .SH "Constructor & Destructor Documentation"
 .PP 
-.SS "slou::Logger::Logger (std::string projectName = \fC'slou'\fP, const char * format = \fC'%X'\fP, bool shouldLogToFile = \fCtrue\fP, bool shouldLogToScreen = \fCfalse\fP, std::string logFilename = \fC'slou\&.log'\fP)\fC [explicit]\fP"
+.SS "slou::Logger::Logger (std::string projectName = \fC'slou'\fP, const char * timeFormat = \fC'%X'\fP, bool shouldLogToFile = \fCtrue\fP, bool shouldLogToScreen = \fCfalse\fP, std::string logFilename = \fC'slou\&.log'\fP, std::string format = \fC'{projectName} \- [{level}] ({time}): {message}'\fP)\fC [explicit]\fP"
 
 .PP
 Default \fBLogger\fP class constructor that initializes all passed in variables for use\&. The constructor checks if the log file exists and if it does, the constructor removes the file\&.
 .PP
-For more ways of formatting the date and time, check out: https://cplusplus.com/reference/ctime/strftime/
+For more ways of formatting date and time, check out: https://cplusplus.com/reference/ctime/strftime/
 .PP
 \fBParameters\fP
 .RS 4
 \fIprojectName\fP string representing the project name\&. (defaults to 'slou') 
 .br
-\fIformat\fP string representing the date and/or time format\&. (defaults to '%X' which means the current hour, minute and second) 
+\fItimeFormat\fP string representing the date and/or time format\&. (defaults to '%X' which means the current hour, minute and second) 
 .br
 \fIshouldLogToFile\fP boolean representing the need to log to a file\&. (defaults to 'true') 
 .br
 \fIshouldLogToScreen\fP boolean representing the need to log to the screen\&. (defaults to 'false') 
 .br
 \fIlogFilename\fP string representing the path and name of the log file\&. (defaults to 'slou\&.log') 
+.br
+\fIformat\fP string representing the custom log format\&. (defaults to '{projectName} - [{level}] ({time}): {message}') 
 .RE
 .PP
 
 .PP
-Definition at line \fB27\fP of file \fBslou\&.cpp\fP\&.
+Definition at line \fB31\fP of file \fBslou\&.cpp\fP\&.
 .SS "slou::Logger::~Logger ()"
 
 .PP
 Default \fBLogger\fP class deconstructor\&. The deconstructor does nothing\&. 
 .PP
-Definition at line \fB42\fP of file \fBslou\&.cpp\fP\&.
+Definition at line \fB47\fP of file \fBslou\&.cpp\fP\&.
 .SH "Member Function Documentation"
 .PP 
+.SS "std::string slou::Logger::CurrentDateAndTime (const char * timeFormat)"
+
+.PP
+Function gets the current date and time and displays it in the format passed to the variable\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItimeFormat\fP constant character pointer representing the format of the date and/or time\&. 
+.RE
+.PP
+
+.PP
+Definition at line \fB90\fP of file \fBslou\&.cpp\fP\&.
+.SS "std::string slou::Logger::Format (std::string format)"
+
+.PP
+Function finds strings in a custom format and replaces them with variable values\&. Replaced strings are:
+.IP "\(bu" 2
+{projectName} - replaced for projectName variable
+.IP "\(bu" 2
+{level} - replaced for private level variable
+.IP "\(bu" 2
+{time} - replaced for timeFormat variable
+.IP "\(bu" 2
+{message} - replaced for private message variable
+.PP
+.PP
+\fBParameters\fP
+.RS 4
+\fIformat\fP string representing the log format using the variables listed above\&. 
+.RE
+.PP
+
+.PP
+Definition at line \fB118\fP of file \fBslou\&.cpp\fP\&.
 .SS "void slou::Logger::Log (std::string level, std::string message)"
 
 .PP
@@ -121,7 +166,7 @@ Function logs the passed in message variable to the terminal and/or a file\&.
 .PP
 
 .PP
-Definition at line \fB49\fP of file \fBslou\&.cpp\fP\&.
+Definition at line \fB54\fP of file \fBslou\&.cpp\fP\&.
 .SH "Member Data Documentation"
 .PP 
 .SS "const std::string slou::Logger::CRITICAL = 'CRITICAL'"
@@ -129,61 +174,61 @@ Definition at line \fB49\fP of file \fBslou\&.cpp\fP\&.
 .PP
 Critical level indicates that there's something wrong with the program and requires immediate attention\&. 
 .PP
-Definition at line \fB40\fP of file \fBslou\&.hpp\fP\&.
+Definition at line \fB42\fP of file \fBslou\&.hpp\fP\&.
 .SS "const std::string slou::Logger::ERROR = 'ERROR'"
 
 .PP
 Error level indicates that there's something wrong with the program requires attention\&. 
 .PP
-Definition at line \fB39\fP of file \fBslou\&.hpp\fP\&.
-.SS "const char* slou::Logger::format"
-
-.PP
-Date and/or time format\&. (defaults to '%X', which means the current hour, minute and second) 
-.PP
-Definition at line \fB44\fP of file \fBslou\&.hpp\fP\&.
+Definition at line \fB41\fP of file \fBslou\&.hpp\fP\&.
 .SS "const std::string slou::Logger::INFO = 'INFO'"
 
 .PP
 Info level displays basic information\&. 
 .PP
-Definition at line \fB37\fP of file \fBslou\&.hpp\fP\&.
+Definition at line \fB39\fP of file \fBslou\&.hpp\fP\&.
 .SS "std::string slou::Logger::logFilename"
 
 .PP
 Path and name of the log file\&. (defaults to 'slou\&.log') 
 .PP
-Definition at line \fB49\fP of file \fBslou\&.hpp\fP\&.
+Definition at line \fB51\fP of file \fBslou\&.hpp\fP\&.
 .SS "std::string slou::Logger::projectName"
 
 .PP
 Name of your project\&. (defaults to 'slou') 
 .PP
-Definition at line \fB42\fP of file \fBslou\&.hpp\fP\&.
+Definition at line \fB44\fP of file \fBslou\&.hpp\fP\&.
 .SS "bool slou::Logger::shouldLogToFile"
 
 .PP
 Should the logger put logs to a file\&. (defaults to 'true') 
 .PP
-Definition at line \fB46\fP of file \fBslou\&.hpp\fP\&.
+Definition at line \fB48\fP of file \fBslou\&.hpp\fP\&.
 .SS "bool slou::Logger::shouldLogToScreen"
 
 .PP
 Should the logger display logs to a screen\&. (defaults to 'false') 
 .PP
-Definition at line \fB47\fP of file \fBslou\&.hpp\fP\&.
+Definition at line \fB49\fP of file \fBslou\&.hpp\fP\&.
 .SS "const std::string slou::Logger::SUCCESS = 'SUCCESS'"
 
 .PP
 Success level indicates that an operation was successful\&. 
 .PP
-Definition at line \fB36\fP of file \fBslou\&.hpp\fP\&.
+Definition at line \fB38\fP of file \fBslou\&.hpp\fP\&.
+.SS "const char* slou::Logger::timeFormat"
+
+.PP
+Date and/or time format\&. (defaults to '%X', which means the current hour, minute and second) 
+.PP
+Definition at line \fB46\fP of file \fBslou\&.hpp\fP\&.
 .SS "const std::string slou::Logger::WARNING = 'WARNING'"
 
 .PP
 Warning level indicates that there's something wrong with the program but doesn't require immediate attention\&. 
 .PP
-Definition at line \fB38\fP of file \fBslou\&.hpp\fP\&.
+Definition at line \fB40\fP of file \fBslou\&.hpp\fP\&.
 
 .SH "Author"
 .PP 

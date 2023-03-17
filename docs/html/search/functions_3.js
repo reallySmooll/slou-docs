@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['virtualfunc_0',['virtualfunc',['../classMyLibrary_1_1SubclassExample.html#a08668a9f16511ad37fb547c985d62764',1,'MyLibrary::SubclassExample']]]
+  ['_7elogger_0',['~Logger',['../classslou_1_1Logger.html#ad7bd8a3cf48516ac814ba27ac6c70fb4',1,'slou::Logger']]]
 ];

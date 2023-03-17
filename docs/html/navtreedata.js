@@ -25,61 +25,65 @@
 var NAVTREE =
 [
   [ "slou", "index.html", [
-    [ "Installation", "index.html#autotoc_md12", [
-      [ "Dependencies", "index.html#autotoc_md14", null ],
-      [ "Building", "index.html#autotoc_md15", null ]
+    [ "Installation", "index.html#autotoc_md6", [
+      [ "Dependencies", "index.html#autotoc_md7", null ],
+      [ "Building", "index.html#autotoc_md8", null ]
     ] ],
-    [ "Quickstart", "index.html#autotoc_md17", null ],
-    [ "Contributing", "index.html#autotoc_md19", null ],
-    [ "Code of Conduct", "index.html#autotoc_md20", null ],
+    [ "Quickstart", "index.html#autotoc_md9", null ],
+    [ "Custom formatting", "index.html#autotoc_md11", [
+      [ "Usage", "index.html#autotoc_md12", null ]
+    ] ],
+    [ "Contributing", "index.html#autotoc_md15", null ],
+    [ "Code of Conduct", "index.html#autotoc_md16", null ],
     [ "Release Notes", "md_CHANGELOG.html", [
-      [ "v1.0.1 | 11, mar. 2023", "md_CHANGELOG.html#autotoc_md1", null ],
-      [ "v1.0.0 | 11, mar. 2023", "md_CHANGELOG.html#autotoc_md2", null ]
+      [ "v1.1.0 | 17, mar. 2023", "md_CHANGELOG.html#autotoc_md3", null ],
+      [ "v1.0.1 | 11, mar. 2023", "md_CHANGELOG.html#autotoc_md4", null ],
+      [ "v1.0.0 | 11, mar. 2023", "md_CHANGELOG.html#autotoc_md5", null ]
     ] ],
     [ "Code of Conduct - slou", "md_CODE_OF_CONDUCT.html", [
-      [ "Our Pledge", "md_CODE_OF_CONDUCT.html#autotoc_md4", null ],
-      [ "Our Standards", "md_CODE_OF_CONDUCT.html#autotoc_md5", null ],
-      [ "Our Responsibilities", "md_CODE_OF_CONDUCT.html#autotoc_md7", null ],
-      [ "Scope", "md_CODE_OF_CONDUCT.html#autotoc_md8", null ],
-      [ "Enforcement", "md_CODE_OF_CONDUCT.html#autotoc_md9", null ],
-      [ "Enforcement Guidelines", "md_CODE_OF_CONDUCT.html#autotoc_md10", [
-        [ "1. Correction", "md_CODE_OF_CONDUCT.html#autotoc_md11", null ],
-        [ "2. Warning", "md_CODE_OF_CONDUCT.html#autotoc_md13", null ],
-        [ "3. Temporary Ban", "md_CODE_OF_CONDUCT.html#autotoc_md16", null ],
-        [ "4. Permanent Ban", "md_CODE_OF_CONDUCT.html#autotoc_md18", null ]
+      [ "Our Pledge", "md_CODE_OF_CONDUCT.html#autotoc_md17", null ],
+      [ "Our Standards", "md_CODE_OF_CONDUCT.html#autotoc_md18", null ],
+      [ "Our Responsibilities", "md_CODE_OF_CONDUCT.html#autotoc_md19", null ],
+      [ "Scope", "md_CODE_OF_CONDUCT.html#autotoc_md20", null ],
+      [ "Enforcement", "md_CODE_OF_CONDUCT.html#autotoc_md21", null ],
+      [ "Enforcement Guidelines", "md_CODE_OF_CONDUCT.html#autotoc_md22", [
+        [ "1. Correction", "md_CODE_OF_CONDUCT.html#autotoc_md23", null ],
+        [ "2. Warning", "md_CODE_OF_CONDUCT.html#autotoc_md24", null ],
+        [ "3. Temporary Ban", "md_CODE_OF_CONDUCT.html#autotoc_md25", null ],
+        [ "4. Permanent Ban", "md_CODE_OF_CONDUCT.html#autotoc_md26", null ]
       ] ],
-      [ "Attribution", "md_CODE_OF_CONDUCT.html#autotoc_md21", null ]
+      [ "Attribution", "md_CODE_OF_CONDUCT.html#autotoc_md27", null ]
     ] ],
     [ "CONTRIBUTING", "md_CONTRIBUTING.html", [
-      [ "Contributing to slou", "md_CONTRIBUTING.html#autotoc_md22", [
-        [ "Table of Contents", "md_CONTRIBUTING.html#autotoc_md23", null ],
-        [ "Code of Conduct", "md_CONTRIBUTING.html#autotoc_md24", null ],
-        [ "I Have a Question", "md_CONTRIBUTING.html#autotoc_md25", null ],
-        [ "I Want To Contribute", "md_CONTRIBUTING.html#autotoc_md29", [
-          [ "Reporting Bugs", "md_CONTRIBUTING.html#autotoc_md30", [
-            [ "Before Submitting a Bug Report", "md_CONTRIBUTING.html#autotoc_md31", null ],
-            [ "How Do I Submit a Good Bug Report?", "md_CONTRIBUTING.html#autotoc_md32", null ]
+      [ "Contributing to slou", "md_CONTRIBUTING.html#autotoc_md28", [
+        [ "Table of Contents", "md_CONTRIBUTING.html#autotoc_md29", null ],
+        [ "Code of Conduct", "md_CONTRIBUTING.html#autotoc_md30", null ],
+        [ "I Have a Question", "md_CONTRIBUTING.html#autotoc_md31", null ],
+        [ "I Want To Contribute", "md_CONTRIBUTING.html#autotoc_md32", [
+          [ "Reporting Bugs", "md_CONTRIBUTING.html#autotoc_md33", [
+            [ "Before Submitting a Bug Report", "md_CONTRIBUTING.html#autotoc_md34", null ],
+            [ "How Do I Submit a Good Bug Report?", "md_CONTRIBUTING.html#autotoc_md35", null ]
           ] ],
-          [ "Suggesting Enhancements", "md_CONTRIBUTING.html#autotoc_md33", [
-            [ "Before Submitting an Enhancement", "md_CONTRIBUTING.html#autotoc_md34", null ],
-            [ "How Do I Submit a Good Enhancement Suggestion?", "md_CONTRIBUTING.html#autotoc_md35", null ]
+          [ "Suggesting Enhancements", "md_CONTRIBUTING.html#autotoc_md36", [
+            [ "Before Submitting an Enhancement", "md_CONTRIBUTING.html#autotoc_md37", null ],
+            [ "How Do I Submit a Good Enhancement Suggestion?", "md_CONTRIBUTING.html#autotoc_md38", null ]
           ] ],
-          [ "Your First Code Contribution", "md_CONTRIBUTING.html#autotoc_md36", [
-            [ "Build system", "md_CONTRIBUTING.html#autotoc_md37", null ],
-            [ "Code editor", "md_CONTRIBUTING.html#autotoc_md38", null ],
-            [ "Building", "md_CONTRIBUTING.html#autotoc_md39", null ]
+          [ "Your First Code Contribution", "md_CONTRIBUTING.html#autotoc_md39", [
+            [ "Build system", "md_CONTRIBUTING.html#autotoc_md40", null ],
+            [ "Code editor", "md_CONTRIBUTING.html#autotoc_md41", null ],
+            [ "Building", "md_CONTRIBUTING.html#autotoc_md42", null ]
           ] ],
-          [ "Improving The Documentation", "md_CONTRIBUTING.html#autotoc_md40", null ]
+          [ "Improving The Documentation", "md_CONTRIBUTING.html#autotoc_md43", null ]
         ] ],
-        [ "Styleguides", "md_CONTRIBUTING.html#autotoc_md41", [
-          [ "Commit Messages", "md_CONTRIBUTING.html#autotoc_md42", null ]
+        [ "Styleguides", "md_CONTRIBUTING.html#autotoc_md44", [
+          [ "Commit Messages", "md_CONTRIBUTING.html#autotoc_md45", null ]
         ] ],
-        [ "Attribution", "md_CONTRIBUTING.html#autotoc_md43", null ]
+        [ "Attribution", "md_CONTRIBUTING.html#autotoc_md46", null ]
       ] ]
     ] ],
     [ "Security Policy", "md_SECURITY.html", [
-      [ "Supported Versions", "md_SECURITY.html#autotoc_md27", null ],
-      [ "Reporting a Vulnerability", "md_SECURITY.html#autotoc_md28", null ]
+      [ "Supported Versions", "md_SECURITY.html#autotoc_md13", null ],
+      [ "Reporting a Vulnerability", "md_SECURITY.html#autotoc_md14", null ]
     ] ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ]

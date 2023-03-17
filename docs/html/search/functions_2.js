@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['test_0',['test',['../classMyLibrary_1_1Example.html#a1c0046b0674eb4cad09c5d3e943912b8',1,'MyLibrary::Example']]]
+  ['log_0',['Log',['../classslou_1_1Logger.html#a71e41ffbcfe472a6fed2119bcc78f000',1,'slou::Logger']]],
+  ['logger_1',['Logger',['../classslou_1_1Logger.html#a760218c0a2cb81c88592ad798b28004c',1,'slou::Logger']]]
 ];
