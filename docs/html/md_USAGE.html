@@ -107,7 +107,7 @@ $(document).ready(function(){initNavTree('md_USAGE.html',''); initResizable(); }
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p>This file explains ways of configuration for slou or new features that have been added in the latest release.</p>
-<h1><a class="anchor" id="autotoc_md39"></a>
+<h1><a class="anchor" id="autotoc_md47"></a>
 Custom formatting</h1>
 <p>As of version <code>1.1.0</code>, slou supports custom formatting similar in use to the Python <code>logging</code> library.</p>
 <p>There are four variables you can use to customize your log format:</p>
@@ -139,7 +139,7 @@ Custom formatting</h1>
 </div><!-- fragment --><p>The <code>format</code> variable would look something like this:</p>
 <div class="fragment"><div class="line">std::string format = <span class="stringliteral">&quot;{projectName} - [{level}]: {message}&quot;</span>;</div>
 </div><!-- fragment --><p>And that's all you need to know to format your logs however you like. Happy formatting! :)</p>
-<h1><a class="anchor" id="autotoc_md45"></a>
+<h1><a class="anchor" id="autotoc_md48"></a>
 Coloring terminal output</h1>
 <p>As of version <code>v1.1.1</code>, you can decide whether you want to color terminal output or not. This is done using the <code>colorTerminalOutput</code> variable after you create an instance of The Logger.</p>
 <div class="fragment"><div class="line"><span class="preprocessor">#include &lt;slou/slou.hpp&gt;</span></div>
@@ -193,9 +193,9 @@ Changing time formatting</h1>
 <div class="ttc" id="aclassslou_1_1Logger_html_a05818b88d3110524bd2e729b3a039d85"><div class="ttname"><a href="classslou_1_1Logger.html#a05818b88d3110524bd2e729b3a039d85">slou::Logger::INFO</a></div><div class="ttdeci">const std::string INFO</div><div class="ttdoc">Info level displays basic information.</div><div class="ttdef"><b>Definition:</b> <a href="slou_8hpp_source.html#l00037">slou.hpp:37</a></div></div>
 </div><!-- fragment --><p>In this example <code>X</code> has been changed to <code>x</code>, which instead of the current time, displays the current date:</p>
 <p>Time format set to <code>X</code>:</p>
-<p><img src="assets/images/Time_format_%X.png" alt="Time formatting using the %X conversion specifier" class="inline"/></p>
+<p><img src="assets/images/Time_format_time.png" alt="Time formatting using the %X conversion specifier" class="inline"/></p>
 <p>Time format set to <code>x</code>:</p>
-<p><img src="assets/images/Time_format_%x.png" alt="Time formatting using the %x conversion specifier" class="inline"/></p>
+<p><img src="assets/images/Time_format_date.png" alt="Time formatting using the %x conversion specifier" class="inline"/></p>
 <p>If you'd like to see more ways of formatting your date and/or time, visit <a href="https://en.cppreference.com/w/cpp/io/manip/put_time">https://en.cppreference.com/w/cpp/io/manip/put_time</a>.</p>
 <h1><a class="anchor" id="autotoc_md51"></a>
 Changing constructor arguments on the fly</h1>
@@ -240,7 +240,7 @@ Changing constructor arguments on the fly</h1>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Sun Mar 19 2023 15:51:27 for slou by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+    <li class="footer">Generated on Sun Mar 19 2023 15:56:11 for slou by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
   </ul>
 </div>
 </body>
