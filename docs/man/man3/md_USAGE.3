@@ -1,0 +1,199 @@
+.TH "md_USAGE" 3 "Sun Mar 19 2023" "Version v1.1.1" "slou" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+md_USAGE \- Usage and configuration 
+.PP
+This file explains ways of configuration for slou or new features that have been added in the latest release\&.
+.SH "Custom formatting"
+.PP
+As of version \fC1\&.1\&.0\fP, slou supports custom formatting similar in use to the Python \fClogging\fP library\&.
+.PP
+There are four variables you can use to customize your log format:
+.PP
+.IP "\(bu" 2
+\fC{projectName}\fP - Name of your project
+.IP "\(bu" 2
+\fC{level}\fP - Severity level
+.IP "\(bu" 2
+\fC{time}\fP - Date and/or time
+.IP "\(bu" 2
+\fC{message}\fP - Your log message
+.PP
+.PP
+To customize your format, you need to add it as a constructor argument:
+.PP
+.PP
+.nf
+#include <slou/slou\&.hpp>
+
+int main()
+{
+    // You can create a new variable with your custom format, or pass it directly to the constructor\&.
+    std::string format = "{projectName} \- [{level}] ({time}): {message}";
+
+    slou::Logger logger("slou", "%X", true, false, "slou\&.log", format);
+
+    logger\&.Log(logger\&.INFO, "Hello, world!");
+
+    return 0;
+}
+.fi
+.PP
+.PP
+The output:
+.PP
+.PP
+.nf
+slou \- [INFO] (22:56:40): Hello, world!
+.fi
+.PP
+.PP
+You can obviously change the formatting to exclude some info from the log like for example the time, which would output:
+.PP
+.PP
+.nf
+slou \- [INFO]: Hello, world!
+.fi
+.PP
+.PP
+The \fCformat\fP variable would look something like this:
+.PP
+.PP
+.nf
+std::string format = "{projectName} \- [{level}]: {message}";
+.fi
+.PP
+.PP
+And that's all you need to know to format your logs however you like\&. Happy formatting! :)
+.SH "Coloring terminal output"
+.PP
+As of version \fCv1\&.1\&.1\fP, you can decide whether you want to color terminal output or not\&. This is done using the \fCcolorTerminalOutput\fP variable after you create an instance of The Logger\&.
+.PP
+.PP
+.nf
+#include <slou/slou\&.hpp>
+
+int main()
+{
+    slou::Logger logger("slou", "%X", true, true);
+
+    // By default colorTerminalOutput is set to true\&.
+    logger\&.colorTerminalOutput = true;
+
+    logger\&.Log(logger\&.SUCCESS, "Hello, world!");
+
+    return 0;
+}
+.fi
+.PP
+.PP
+If you set \fCcolorTerminalOutput\fP to \fCtrue\fP or leave it unchanged, the following would be the terminal output:
+.PP
+.PP
+If you set \fCcolorTerminalOutput\fP to \fCfalse\fP, the following would be the terminal output:
+.PP
+.SH "Custom severity levels"
+.PP
+Severity levels (like \fCSUCCESS\fP or \fCINFO\fP) are just strings containing text (like \fCSUCCESS\fP or \fCINFO\fP), which means you can customize and add your own severity levels\&.
+.PP
+To do that, you can change the first argument in the \fCLog()\fP function:
+.PP
+.PP
+.nf
+#include <slou/slou\&.hpp>
+
+int main()
+{
+    slou::Logger logger;
+
+    logger\&.Log("Your custom severity level", "Hello, world!");
+
+    return 0;
+}
+.fi
+.PP
+.PP
+The resulting output would be:
+.PP
+.SH "Changing time formatting"
+.PP
+slou uses the \fCstd::put_time()\fP function from the \fCiomanip\fP library\&.
+.PP
+If you'd like to change the default formatting, you need to change the second constructor argument:
+.PP
+.PP
+.nf
+#include <slou/slou\&.hpp>
+
+int main()
+{
+    slou::Logger logger("slou", "%x");
+
+    logger\&.Log(logger\&.INFO, "Hello, world!");
+
+    return 0;
+}
+.fi
+.PP
+.PP
+In this example \fCX\fP has been changed to \fCx\fP, which instead of the current time, displays the current date:
+.PP
+Time format set to \fCX\fP:
+.PP
+.PP
+Time format set to \fCx\fP:
+.PP
+.PP
+If you'd like to see more ways of formatting your date and/or time, visit https://en.cppreference.com/w/cpp/io/manip/put_time\&.
+.SH "Changing constructor arguments on the fly"
+.PP
+The Logger's constructor does two jobs, checking if the log file exists and if it does, removing it so a new one can be created, and initializing the constructor arguments to variables you can change on the fly\&.
+.PP
+Like for example the \fClogToFile\fP variable:
+.PP
+.PP
+.nf
+#include <slou/slou\&.hpp>
+
+int main()
+{
+    slou::Logger logger("slou", "%x", true, true);
+
+    logger\&.Log(logger\&.INFO, "This is being logged into the file!");
+
+    logger\&.logToFile = false;
+
+    logger\&.Log(logger\&.INFO, "This isn't being logged into the file!");
+}
+.fi
+.PP
+.PP
+This will result in the following output:
+.PP
+.PP
+Another example is the \fClogToScreen\fP variable:
+.PP
+.PP
+.nf
+#include <slou/slou\&.hpp>
+
+int main()
+{
+    slou::Logger logger("slou", "%x", true, true);
+
+    logger\&.Log(logger\&.INFO, "This is being logged onto the screen!");
+
+    logger\&.logToScreen = false;
+
+    logger\&.Log(logger\&.INFO, "This isn't being logged onto the screen!");
+}
+.fi
+.PP
+.PP
+The above code, after execution, will result in the following output:
+.PP
+.PP
+You can change every single one of the constructor arguments whenever you want\&.
+.PP
+\fBNOTE: Format is one exception, if you'd like to change the log format, you need to change it in the constructor, or change the format variable if you have one before you initialize The Logger\&. Check out the \fBCustom formatting\fP section above\&.\fP 
