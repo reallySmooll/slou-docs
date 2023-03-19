@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['projectname_0',['projectName',['../classslou_1_1Logger.html#afd292eba853b682e93a7c75e87682c62',1,'slou::Logger']]]
+  ['info_0',['INFO',['../classslou_1_1Logger.html#a05818b88d3110524bd2e729b3a039d85',1,'slou::Logger']]]
 ];

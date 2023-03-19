@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['logfilename_0',['logFilename',['../classslou_1_1Logger.html#ada99d57909b9c7a7b3af3d6340428451',1,'slou::Logger']]]
+  ['green_0',['GREEN',['../classslou_1_1Logger.html#af2154a9745e350a1c2998b9a099039eb',1,'slou::Logger']]]
 ];

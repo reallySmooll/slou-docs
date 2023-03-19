@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['code_20of_20conduct_20_2d_20slou_0',['Code of Conduct - slou',['../md_CODE_OF_CONDUCT.html',1,'']]],
-  ['contributing_1',['CONTRIBUTING',['../md_CONTRIBUTING.html',1,'']]],
-  ['critical_2',['CRITICAL',['../classslou_1_1Logger.html#ab4d38924cf9871d4dee088f7db7ffe71',1,'slou::Logger']]],
-  ['currentdateandtime_3',['CurrentDateAndTime',['../classslou_1_1Logger.html#a25c01015ff6f2fe6e9e62cd1150d7239',1,'slou::Logger']]]
+  ['_5fformat_0',['_format',['../classslou_1_1Logger.html#aafe368edb30aa2c2f27c143dec4f6a0c',1,'slou::Logger']]],
+  ['_5flevel_1',['_level',['../classslou_1_1Logger.html#a5bce8d22b2b0ffce12a076be851ffd75',1,'slou::Logger']]],
+  ['_5fmessage_2',['_message',['../classslou_1_1Logger.html#a49c2fa250b3603e7f76b3353d96eef41',1,'slou::Logger']]]
 ];

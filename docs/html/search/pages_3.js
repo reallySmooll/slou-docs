@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['extensions_0',['Extensions',['../md_submodules_doxygen_awesome_css_docs_extensions.html',1,'']]]
+  ['usage_20and_20configuration_0',['Usage and configuration',['../md_USAGE.html',1,'']]]
 ];

@@ -38,7 +38,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">slou<span id="projectnumber">&#160;v1.1.0</span>
+   <div id="projectname">slou<span id="projectnumber">&#160;v1.1.1</span>
    </div>
    <div id="projectbrief">&quot;Smooll&quot; LOgging Utility</div>
   </td>
@@ -108,16 +108,25 @@ $(document).ready(function(){initNavTree('md_CHANGELOG.html',''); initResizable(
 <div class="contents">
 <div class="textblock"><p>These are the relase notes for <code>slou</code>.</p>
 <h1><a class="anchor" id="autotoc_md3"></a>
+v1.1.1 | 19, mar. 2023</h1>
+<p><b>Changed</b></p><ul>
+<li>Changed variables <code>shouldLogToFile</code> and <code>shouldLogToScreen</code> to <code>logToFile</code> and <code>logToScreen</code></li>
+</ul>
+<p><b>Added</b></p><ul>
+<li><code>colorTerminalOutput</code> to check if the user wants to color the terminal output</li>
+<li><code>USAGE.md</code> file as smaller documentation explaining ways of configuration for The Logger</li>
+</ul>
+<h1><a class="anchor" id="autotoc_md4"></a>
 v1.1.0 | 17, mar. 2023</h1>
 <p><b>Added</b></p><ul>
 <li>Custom formatting similar to the Python <code>logging</code> library</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md4"></a>
+<h1><a class="anchor" id="autotoc_md5"></a>
 v1.0.1 | 11, mar. 2023</h1>
 <p><b>Changed</b></p><ul>
 <li>Changed <code>CurrentDateAndTime()</code> function to make it more cross-platform ('cause I've learned from my friend that <code>localtime</code> is not supported on Windows)</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md5"></a>
+<h1><a class="anchor" id="autotoc_md6"></a>
 v1.0.0 | 11, mar. 2023</h1>
 <ul>
 <li>Initial release </li>
@@ -128,7 +137,7 @@ v1.0.0 | 11, mar. 2023</h1>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Fri Mar 17 2023 23:20:56 for slou by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+    <li class="footer">Generated on Sun Mar 19 2023 15:51:27 for slou by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
   </ul>
 </div>
 </body>
