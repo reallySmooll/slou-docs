@@ -1,4 +1,4 @@
-.TH "slou::Logger" 3 "Sun Mar 19 2023" "Version v1.1.1" "slou" \" -*- nroff -*-
+.TH "slou::Logger" 3 "Tue Mar 21 2023" "Version v1.2.0" "slou" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -13,13 +13,37 @@ slou::Logger \- Class creates the logger that logs everything to the screen and/
 
 .in +1c
 .ti -1c
-.RI "\fBLogger\fP (const std::string &\fBprojectName\fP='slou', const char *\fBtimeFormat\fP='%X', bool \fBlogToFile\fP=true, bool \fBlogToScreen\fP=false, const std::string &\fBlogFilename\fP='slou\&.log', const std::string &format='{projectName} \- [{level}] ({time}): {message}')"
+.RI "\fBLogger\fP (const std::string &projectName='slou')"
 .br
 .RI "Default \fBLogger\fP class constructor that initializes all passed in variables for use\&. "
 .ti -1c
 .RI "\fB~Logger\fP ()"
 .br
 .RI "Default \fBLogger\fP class deconstructor\&. "
+.ti -1c
+.RI "\fBLogger\fP & \fBmoduleName\fP (const std::string &moduleName)"
+.br
+.RI "Changes the name of your module (e\&.g\&. class name)\&. "
+.ti -1c
+.RI "\fBLogger\fP & \fBtimeFormat\fP (const char *timeFormat)"
+.br
+.RI "Changes the time format\&. "
+.ti -1c
+.RI "\fBLogger\fP & \fBlogToFile\fP (bool logToFile)"
+.br
+.RI "Changes whether the logs should be saved to a file\&. "
+.ti -1c
+.RI "\fBLogger\fP & \fBlogToScreen\fP (bool logToScreen)"
+.br
+.RI "Changes whether the logs should be displayed in the terminal\&. "
+.ti -1c
+.RI "\fBLogger\fP & \fBlogFilename\fP (const std::string &logFilename)"
+.br
+.RI "Changes the log file path and name\&. "
+.ti -1c
+.RI "\fBLogger\fP & \fBformat\fP (const std::string &format)"
+.br
+.RI "Changes the log format\&. "
 .ti -1c
 .RI "void \fBLog\fP (const std::string &level, const std::string &message)"
 .br
@@ -49,29 +73,9 @@ slou::Logger \- Class creates the logger that logs everything to the screen and/
 .br
 .RI "Critical level indicates that there's something wrong with the program and requires immediate attention\&. "
 .ti -1c
-.RI "std::string \fBprojectName\fP"
-.br
-.RI "Name of your project\&. (defaults to 'slou') "
-.ti -1c
-.RI "const char * \fBtimeFormat\fP"
-.br
-.RI "Date and/or time format\&. (defaults to '%X', which means the current hour, minute and second) "
-.ti -1c
-.RI "bool \fBlogToFile\fP"
-.br
-.RI "Should the logger put logs to a file\&. (defaults to 'true') "
-.ti -1c
-.RI "bool \fBlogToScreen\fP"
-.br
-.RI "Should the logger display logs to a screen\&. (defaults to 'false') "
-.ti -1c
-.RI "std::string \fBlogFilename\fP"
-.br
-.RI "Path and name of the log file\&. (defaults to 'slou\&.log') "
-.ti -1c
 .RI "bool \fBcolorTerminalOutput\fP = true"
 .br
-.RI "Should logs in the terminal be colored\&. (defaults to 'true') "
+.RI "Should logs in the terminal be colored\&. "
 .in -1c
 .SS "Private Member Functions"
 
@@ -81,7 +85,7 @@ slou::Logger \- Class creates the logger that logs everything to the screen and/
 .br
 .RI "Function gets the current date and time and displays it in the format passed to the variable\&. "
 .ti -1c
-.RI "std::string \fBFormat\fP (std::string format)"
+.RI "std::string \fBFormat\fP (std::string \fBformat\fP)"
 .br
 .RI "Function finds strings in a custom format and replaces them with variable values\&. "
 .in -1c
@@ -117,6 +121,30 @@ slou::Logger \- Class creates the logger that logs everything to the screen and/
 .br
 .RI "The file used for logging\&. "
 .ti -1c
+.RI "std::string \fB_projectName\fP"
+.br
+.RI "Name of your project\&. "
+.ti -1c
+.RI "const char * \fB_timeFormat\fP"
+.br
+.RI "Date and/or time format\&. "
+.ti -1c
+.RI "bool \fB_logToFile\fP"
+.br
+.RI "Should the logger put logs to a file\&. "
+.ti -1c
+.RI "bool \fB_logToScreen\fP"
+.br
+.RI "Should the logger display logs to a screen\&. "
+.ti -1c
+.RI "std::string \fB_logFilename\fP"
+.br
+.RI "Path and name of the log file\&. "
+.ti -1c
+.RI "std::string \fB_moduleName\fP"
+.br
+.RI "Name of your module\&. (in other words, your class or something else, e\&.g\&. 'CORE', 'UTILS', 'RENDERER'\&. Can also be lowercase) "
+.ti -1c
 .RI "std::string \fB_format\fP"
 .br
 .RI "Custom log format\&. "
@@ -136,37 +164,25 @@ Class creates the logger that logs everything to the screen and/or file\&.
 Definition at line \fB28\fP of file \fBslou\&.hpp\fP\&.
 .SH "Constructor & Destructor Documentation"
 .PP 
-.SS "slou::Logger::Logger (const std::string & projectName = \fC'slou'\fP, const char * timeFormat = \fC'%X'\fP, bool logToFile = \fCtrue\fP, bool logToScreen = \fCfalse\fP, const std::string & logFilename = \fC'slou\&.log'\fP, const std::string & format = \fC'{projectName} \- [{level}] ({time}): {message}'\fP)\fC [explicit]\fP"
+.SS "slou::Logger::Logger (const std::string & projectName = \fC'slou'\fP)\fC [explicit]\fP"
 
 .PP
 Default \fBLogger\fP class constructor that initializes all passed in variables for use\&. The constructor checks if the log file exists and if it does, the constructor removes the file\&.
 .PP
-For more ways of formatting date and time, check out: https://en.cppreference.com/w/cpp/io/manip/put_time
-.PP
 \fBParameters\fP
 .RS 4
 \fIprojectName\fP constant reference to a string representing the project name\&. (defaults to 'slou') 
-.br
-\fItimeFormat\fP constant character pointer representing the date and/or time format\&. (defaults to '%X' which is the localized time representation, meaning the current hour, minute and second, locale dependent) 
-.br
-\fIlogToFile\fP boolean representing the need to log to a file\&. (defaults to 'true') 
-.br
-\fIlogToScreen\fP boolean representing the need to log to the screen\&. (defaults to 'false') 
-.br
-\fIlogFilename\fP constant reference to a string representing the path and name of the log file\&. (defaults to 'slou\&.log') 
-.br
-\fIformat\fP constant reference to a string representing the custom log format\&. (defaults to '{projectName} - [{level}] ({time}): {message}') 
 .RE
 .PP
 
 .PP
-Definition at line \fB31\fP of file \fBslou\&.cpp\fP\&.
+Definition at line \fB24\fP of file \fBslou\&.cpp\fP\&.
 .SS "slou::Logger::~Logger ()"
 
 .PP
 Default \fBLogger\fP class deconstructor\&. The deconstructor does nothing\&. 
 .PP
-Definition at line \fB47\fP of file \fBslou\&.cpp\fP\&.
+Definition at line \fB41\fP of file \fBslou\&.cpp\fP\&.
 .SH "Member Function Documentation"
 .PP 
 .SS "std::string slou::Logger::CurrentDateAndTime (const char * timeFormat)\fC [private]\fP"
@@ -181,7 +197,20 @@ Function gets the current date and time and displays it in the format passed to 
 .PP
 
 .PP
-Definition at line \fB91\fP of file \fBslou\&.cpp\fP\&.
+Definition at line \fB129\fP of file \fBslou\&.cpp\fP\&.
+.SS "\fBLogger\fP & slou::Logger::format (const std::string & format)"
+
+.PP
+Changes the log format\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIformat\fP constant reference to a string representing the custom log format\&. (defaults to '{projectName} - [{moduleName} | {level}] ({time}): {message}') 
+.RE
+.PP
+
+.PP
+Definition at line \fB84\fP of file \fBslou\&.cpp\fP\&.
 .SS "std::string slou::Logger::Format (std::string format)\fC [private]\fP"
 
 .PP
@@ -194,6 +223,8 @@ Function finds strings in a custom format and replaces them with variable values
 {time} - replaced for timeFormat variable
 .IP "\(bu" 2
 {message} - replaced for private message variable
+.IP "\(bu" 2
+{moduleName} - replaced for moduleName variable
 .PP
 .PP
 \fBParameters\fP
@@ -203,7 +234,7 @@ Function finds strings in a custom format and replaces them with variable values
 .PP
 
 .PP
-Definition at line \fB119\fP of file \fBslou\&.cpp\fP\&.
+Definition at line \fB158\fP of file \fBslou\&.cpp\fP\&.
 .SS "void slou::Logger::Log (const std::string & level, const std::string & message)"
 
 .PP
@@ -218,7 +249,72 @@ Function logs the passed in message variable to the terminal and/or a file\&.
 .PP
 
 .PP
-Definition at line \fB54\fP of file \fBslou\&.cpp\fP\&.
+Definition at line \fB92\fP of file \fBslou\&.cpp\fP\&.
+.SS "\fBLogger\fP & slou::Logger::logFilename (const std::string & logFilename)"
+
+.PP
+Changes the log file path and name\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIlogFilename\fP constant reference to a string representing the path and name of the log file\&. (defaults to 'slou\&.log') 
+.RE
+.PP
+
+.PP
+Definition at line \fB77\fP of file \fBslou\&.cpp\fP\&.
+.SS "\fBLogger\fP & slou::Logger::logToFile (bool logToFile)"
+
+.PP
+Changes whether the logs should be saved to a file\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIlogToFile\fP boolean representing the need to log to a file\&. (defaults to 'true') 
+.RE
+.PP
+
+.PP
+Definition at line \fB63\fP of file \fBslou\&.cpp\fP\&.
+.SS "\fBLogger\fP & slou::Logger::logToScreen (bool logToScreen)"
+
+.PP
+Changes whether the logs should be displayed in the terminal\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIlogToScreen\fP boolean representing the need to log to the screen\&. (defaults to 'false') 
+.RE
+.PP
+
+.PP
+Definition at line \fB70\fP of file \fBslou\&.cpp\fP\&.
+.SS "\fBLogger\fP & slou::Logger::moduleName (const std::string & moduleName)"
+
+.PP
+Changes the name of your module (e\&.g\&. class name)\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fImoduleName\fP constant reference to a string representing the name of your module (e\&.g\&. class name)\&. (defaults to 'main') 
+.RE
+.PP
+
+.PP
+Definition at line \fB47\fP of file \fBslou\&.cpp\fP\&.
+.SS "\fBLogger\fP & slou::Logger::timeFormat (const char * timeFormat)"
+
+.PP
+Changes the time format\&. For more ways of formatting date and time, check out: https://en.cppreference.com/w/cpp/io/manip/put_time
+.PP
+\fBParameters\fP
+.RS 4
+\fItimeFormat\fP constant character pointer representing the date and/or time format\&. (defaults to '%X' which is the localized time representation, meaning the current hour, minute and second, locale dependent) 
+.RE
+.PP
+
+.PP
+Definition at line \fB56\fP of file \fBslou\&.cpp\fP\&.
 .SH "Member Data Documentation"
 .PP 
 .SS "std::string slou::Logger::_format\fC [private]\fP"
@@ -226,127 +322,133 @@ Definition at line \fB54\fP of file \fBslou\&.cpp\fP\&.
 .PP
 Custom log format\&. 
 .PP
-Definition at line \fB65\fP of file \fBslou\&.hpp\fP\&.
+Definition at line \fB72\fP of file \fBslou\&.hpp\fP\&.
 .SS "std::string slou::Logger::_level\fC [private]\fP"
 
 .PP
 Log level\&. 
 .PP
-Definition at line \fB66\fP of file \fBslou\&.hpp\fP\&.
+Definition at line \fB73\fP of file \fBslou\&.hpp\fP\&.
+.SS "std::string slou::Logger::_logFilename\fC [private]\fP"
+
+.PP
+Path and name of the log file\&. 
+.PP
+Definition at line \fB70\fP of file \fBslou\&.hpp\fP\&.
+.SS "bool slou::Logger::_logToFile\fC [private]\fP"
+
+.PP
+Should the logger put logs to a file\&. 
+.PP
+Definition at line \fB67\fP of file \fBslou\&.hpp\fP\&.
+.SS "bool slou::Logger::_logToScreen\fC [private]\fP"
+
+.PP
+Should the logger display logs to a screen\&. 
+.PP
+Definition at line \fB68\fP of file \fBslou\&.hpp\fP\&.
 .SS "std::string slou::Logger::_message\fC [private]\fP"
 
 .PP
 Log message\&. 
 .PP
-Definition at line \fB67\fP of file \fBslou\&.hpp\fP\&.
+Definition at line \fB74\fP of file \fBslou\&.hpp\fP\&.
+.SS "std::string slou::Logger::_moduleName\fC [private]\fP"
+
+.PP
+Name of your module\&. (in other words, your class or something else, e\&.g\&. 'CORE', 'UTILS', 'RENDERER'\&. Can also be lowercase) 
+.PP
+Definition at line \fB71\fP of file \fBslou\&.hpp\fP\&.
+.SS "std::string slou::Logger::_projectName\fC [private]\fP"
+
+.PP
+Name of your project\&. 
+.PP
+Definition at line \fB63\fP of file \fBslou\&.hpp\fP\&.
+.SS "const char* slou::Logger::_timeFormat\fC [private]\fP"
+
+.PP
+Date and/or time format\&. 
+.PP
+Definition at line \fB65\fP of file \fBslou\&.hpp\fP\&.
 .SS "bool slou::Logger::colorTerminalOutput = true"
 
 .PP
-Should logs in the terminal be colored\&. (defaults to 'true') 
+Should logs in the terminal be colored\&. 
 .PP
-Definition at line \fB51\fP of file \fBslou\&.hpp\fP\&.
+Definition at line \fB49\fP of file \fBslou\&.hpp\fP\&.
 .SS "const std::string slou::Logger::CRITICAL = 'CRITICAL'"
 
 .PP
 Critical level indicates that there's something wrong with the program and requires immediate attention\&. 
 .PP
-Definition at line \fB40\fP of file \fBslou\&.hpp\fP\&.
+Definition at line \fB47\fP of file \fBslou\&.hpp\fP\&.
 .SS "const std::string slou::Logger::ERROR = 'ERROR'"
 
 .PP
 Error level indicates that there's something wrong with the program requires attention\&. 
 .PP
-Definition at line \fB39\fP of file \fBslou\&.hpp\fP\&.
+Definition at line \fB46\fP of file \fBslou\&.hpp\fP\&.
 .SS "const std::string slou::Logger::GREEN = '\\033[32m'\fC [private]\fP"
 
 .PP
 Green color paints output green\&. Used when something is successful\&. 
 .PP
-Definition at line \fB58\fP of file \fBslou\&.hpp\fP\&.
+Definition at line \fB56\fP of file \fBslou\&.hpp\fP\&.
 .SS "const std::string slou::Logger::INFO = 'INFO'"
 
 .PP
 Info level displays basic information\&. 
 .PP
-Definition at line \fB37\fP of file \fBslou\&.hpp\fP\&.
+Definition at line \fB44\fP of file \fBslou\&.hpp\fP\&.
 .SS "const std::string slou::Logger::L_RED = '\\033[91m'\fC [private]\fP"
 
 .PP
 Light red color paints output light red\&. Used in errors\&. 
 .PP
-Definition at line \fB60\fP of file \fBslou\&.hpp\fP\&.
+Definition at line \fB58\fP of file \fBslou\&.hpp\fP\&.
 .SS "const std::string slou::Logger::L_YELLOW = '\\033[93m'\fC [private]\fP"
 
 .PP
 Light yellow color paints output light yellow\&. Used in warnings\&. 
 .PP
-Definition at line \fB61\fP of file \fBslou\&.hpp\fP\&.
+Definition at line \fB59\fP of file \fBslou\&.hpp\fP\&.
 .SS "std::fstream slou::Logger::logFile\fC [private]\fP"
 
 .PP
 The file used for logging\&. 
 .PP
-Definition at line \fB63\fP of file \fBslou\&.hpp\fP\&.
-.SS "std::string slou::Logger::logFilename"
-
-.PP
-Path and name of the log file\&. (defaults to 'slou\&.log') 
-.PP
-Definition at line \fB49\fP of file \fBslou\&.hpp\fP\&.
-.SS "bool slou::Logger::logToFile"
-
-.PP
-Should the logger put logs to a file\&. (defaults to 'true') 
-.PP
-Definition at line \fB46\fP of file \fBslou\&.hpp\fP\&.
-.SS "bool slou::Logger::logToScreen"
-
-.PP
-Should the logger display logs to a screen\&. (defaults to 'false') 
-.PP
-Definition at line \fB47\fP of file \fBslou\&.hpp\fP\&.
-.SS "std::string slou::Logger::projectName"
-
-.PP
-Name of your project\&. (defaults to 'slou') 
-.PP
-Definition at line \fB42\fP of file \fBslou\&.hpp\fP\&.
+Definition at line \fB61\fP of file \fBslou\&.hpp\fP\&.
 .SS "const std::string slou::Logger::RED = '\\033[31m'\fC [private]\fP"
 
 .PP
 Red color paints output red\&. Used in critical errors\&. 
 .PP
-Definition at line \fB57\fP of file \fBslou\&.hpp\fP\&.
+Definition at line \fB55\fP of file \fBslou\&.hpp\fP\&.
 .SS "const std::string slou::Logger::RESET = '\\033[0m'\fC [private]\fP"
 
 .PP
 Reset color resets all of the colors to the terminal default\&. 
 .PP
-Definition at line \fB56\fP of file \fBslou\&.hpp\fP\&.
+Definition at line \fB54\fP of file \fBslou\&.hpp\fP\&.
 .SS "const std::string slou::Logger::SUCCESS = 'SUCCESS'"
 
 .PP
 Success level indicates that an operation was successful\&. 
 .PP
-Definition at line \fB36\fP of file \fBslou\&.hpp\fP\&.
-.SS "const char* slou::Logger::timeFormat"
-
-.PP
-Date and/or time format\&. (defaults to '%X', which means the current hour, minute and second) 
-.PP
-Definition at line \fB44\fP of file \fBslou\&.hpp\fP\&.
+Definition at line \fB43\fP of file \fBslou\&.hpp\fP\&.
 .SS "const std::string slou::Logger::WARNING = 'WARNING'"
 
 .PP
 Warning level indicates that there's something wrong with the program but doesn't require immediate attention\&. 
 .PP
-Definition at line \fB38\fP of file \fBslou\&.hpp\fP\&.
+Definition at line \fB45\fP of file \fBslou\&.hpp\fP\&.
 .SS "const std::string slou::Logger::WHITE = '\\033[37m'\fC [private]\fP"
 
 .PP
 White color paints output white\&. Used when displaying basic information\&. 
 .PP
-Definition at line \fB59\fP of file \fBslou\&.hpp\fP\&.
+Definition at line \fB57\fP of file \fBslou\&.hpp\fP\&.
 
 .SH "Author"
 .PP 

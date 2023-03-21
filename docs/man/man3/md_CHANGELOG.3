@@ -1,10 +1,20 @@
-.TH "md_CHANGELOG" 3 "Sun Mar 19 2023" "Version v1.1.1" "slou" \" -*- nroff -*-
+.TH "md_CHANGELOG" 3 "Tue Mar 21 2023" "Version v1.2.0" "slou" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
 md_CHANGELOG \- Release Notes 
 .PP
 These are the relase notes for \fCslou\fP\&.
+.SH "v1\&.2\&.0 | 21, mar\&. 2023"
+.PP
+\fBAdded\fP
+.IP "\(bu" 2
+Named Parameter Idioms instead of positional arguments in the constructor (\fCprojectName\fP is an exception)
+.IP "\(bu" 2
+New log format variable, \fCmoduleName\fP which is the module name (e\&.g\&. class name) \fBChanged\fP
+.IP "\(bu" 2
+Changeable variables initialized in the constructor are now private immutable variables only used for initialization\&. To change those variables, you'll have to use the NPIs
+.PP
 .SH "v1\&.1\&.1 | 19, mar\&. 2023"
 .PP
 \fBChanged\fP

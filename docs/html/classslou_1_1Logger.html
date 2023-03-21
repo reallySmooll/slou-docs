@@ -38,7 +38,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">slou<span id="projectnumber">&#160;v1.1.1</span>
+   <div id="projectname">slou<span id="projectnumber">&#160;v1.2.0</span>
    </div>
    <div id="projectbrief">&quot;Smooll&quot; LOgging Utility</div>
   </td>
@@ -120,12 +120,30 @@ $(document).ready(function(){initNavTree('classslou_1_1Logger.html',''); initRes
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aabac713f54f720337d2bcd63e3ee1813"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classslou_1_1Logger.html#aabac713f54f720337d2bcd63e3ee1813">Logger</a> (const std::string &amp;<a class="el" href="classslou_1_1Logger.html#afd292eba853b682e93a7c75e87682c62">projectName</a>=&quot;slou&quot;, const char *<a class="el" href="classslou_1_1Logger.html#a29113c12994fab96ebaf5912e30d306b">timeFormat</a>=&quot;%X&quot;, bool <a class="el" href="classslou_1_1Logger.html#afb6c2a89b5407603e1d3adb291a88d43">logToFile</a>=true, bool <a class="el" href="classslou_1_1Logger.html#a554a3885f6ceaa0f787f916c1911f666">logToScreen</a>=false, const std::string &amp;<a class="el" href="classslou_1_1Logger.html#ada99d57909b9c7a7b3af3d6340428451">logFilename</a>=&quot;slou.log&quot;, const std::string &amp;format=&quot;{projectName} - [{level}] ({time}): {message}&quot;)</td></tr>
-<tr class="memdesc:aabac713f54f720337d2bcd63e3ee1813"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default <a class="el" href="classslou_1_1Logger.html" title="Class creates the logger that logs everything to the screen and/or file.">Logger</a> class constructor that initializes all passed in variables for use.  <br /></td></tr>
-<tr class="separator:aabac713f54f720337d2bcd63e3ee1813"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac17c6ca9227fb99540304c2c19462e2a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classslou_1_1Logger.html#ac17c6ca9227fb99540304c2c19462e2a">Logger</a> (const std::string &amp;projectName=&quot;slou&quot;)</td></tr>
+<tr class="memdesc:ac17c6ca9227fb99540304c2c19462e2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default <a class="el" href="classslou_1_1Logger.html" title="Class creates the logger that logs everything to the screen and/or file.">Logger</a> class constructor that initializes all passed in variables for use.  <br /></td></tr>
+<tr class="separator:ac17c6ca9227fb99540304c2c19462e2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad7bd8a3cf48516ac814ba27ac6c70fb4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classslou_1_1Logger.html#ad7bd8a3cf48516ac814ba27ac6c70fb4">~Logger</a> ()</td></tr>
 <tr class="memdesc:ad7bd8a3cf48516ac814ba27ac6c70fb4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default <a class="el" href="classslou_1_1Logger.html" title="Class creates the logger that logs everything to the screen and/or file.">Logger</a> class deconstructor.  <br /></td></tr>
 <tr class="separator:ad7bd8a3cf48516ac814ba27ac6c70fb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f212bc9b1aa43d115edbf8062636ce8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classslou_1_1Logger.html">Logger</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classslou_1_1Logger.html#a9f212bc9b1aa43d115edbf8062636ce8">moduleName</a> (const std::string &amp;moduleName)</td></tr>
+<tr class="memdesc:a9f212bc9b1aa43d115edbf8062636ce8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Changes the name of your module (e.g. class name).  <br /></td></tr>
+<tr class="separator:a9f212bc9b1aa43d115edbf8062636ce8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a777e8f8ae7a02f90704be57fb1d535"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classslou_1_1Logger.html">Logger</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classslou_1_1Logger.html#a3a777e8f8ae7a02f90704be57fb1d535">timeFormat</a> (const char *timeFormat)</td></tr>
+<tr class="memdesc:a3a777e8f8ae7a02f90704be57fb1d535"><td class="mdescLeft">&#160;</td><td class="mdescRight">Changes the time format.  <br /></td></tr>
+<tr class="separator:a3a777e8f8ae7a02f90704be57fb1d535"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb486d48be1196195f0f304e58e43fe5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classslou_1_1Logger.html">Logger</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classslou_1_1Logger.html#aeb486d48be1196195f0f304e58e43fe5">logToFile</a> (bool logToFile)</td></tr>
+<tr class="memdesc:aeb486d48be1196195f0f304e58e43fe5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Changes whether the logs should be saved to a file.  <br /></td></tr>
+<tr class="separator:aeb486d48be1196195f0f304e58e43fe5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a67898c0450f5fd760b78f4654765ad5a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classslou_1_1Logger.html">Logger</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classslou_1_1Logger.html#a67898c0450f5fd760b78f4654765ad5a">logToScreen</a> (bool logToScreen)</td></tr>
+<tr class="memdesc:a67898c0450f5fd760b78f4654765ad5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Changes whether the logs should be displayed in the terminal.  <br /></td></tr>
+<tr class="separator:a67898c0450f5fd760b78f4654765ad5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa66903423b41ea537ccfbf2d88f3b07d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classslou_1_1Logger.html">Logger</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classslou_1_1Logger.html#aa66903423b41ea537ccfbf2d88f3b07d">logFilename</a> (const std::string &amp;logFilename)</td></tr>
+<tr class="memdesc:aa66903423b41ea537ccfbf2d88f3b07d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Changes the log file path and name.  <br /></td></tr>
+<tr class="separator:aa66903423b41ea537ccfbf2d88f3b07d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6400e192508290201a4fcef66afbcb52"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classslou_1_1Logger.html">Logger</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classslou_1_1Logger.html#a6400e192508290201a4fcef66afbcb52">format</a> (const std::string &amp;format)</td></tr>
+<tr class="memdesc:a6400e192508290201a4fcef66afbcb52"><td class="mdescLeft">&#160;</td><td class="mdescRight">Changes the log format.  <br /></td></tr>
+<tr class="separator:a6400e192508290201a4fcef66afbcb52"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a295e9b766690bc20dc2663647f2eeaba"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classslou_1_1Logger.html#a295e9b766690bc20dc2663647f2eeaba">Log</a> (const std::string &amp;level, const std::string &amp;message)</td></tr>
 <tr class="memdesc:a295e9b766690bc20dc2663647f2eeaba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function logs the passed in message variable to the terminal and/or a file.  <br /></td></tr>
 <tr class="separator:a295e9b766690bc20dc2663647f2eeaba"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -147,31 +165,16 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:ab4d38924cf9871d4dee088f7db7ffe71"><td class="memItemLeft" align="right" valign="top">const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classslou_1_1Logger.html#ab4d38924cf9871d4dee088f7db7ffe71">CRITICAL</a> = &quot;CRITICAL&quot;</td></tr>
 <tr class="memdesc:ab4d38924cf9871d4dee088f7db7ffe71"><td class="mdescLeft">&#160;</td><td class="mdescRight">Critical level indicates that there's something wrong with the program and requires immediate attention.  <br /></td></tr>
 <tr class="separator:ab4d38924cf9871d4dee088f7db7ffe71"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afd292eba853b682e93a7c75e87682c62"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classslou_1_1Logger.html#afd292eba853b682e93a7c75e87682c62">projectName</a></td></tr>
-<tr class="memdesc:afd292eba853b682e93a7c75e87682c62"><td class="mdescLeft">&#160;</td><td class="mdescRight">Name of your project. (defaults to "slou")  <br /></td></tr>
-<tr class="separator:afd292eba853b682e93a7c75e87682c62"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a29113c12994fab96ebaf5912e30d306b"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classslou_1_1Logger.html#a29113c12994fab96ebaf5912e30d306b">timeFormat</a></td></tr>
-<tr class="memdesc:a29113c12994fab96ebaf5912e30d306b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Date and/or time format. (defaults to "%X", which means the current hour, minute and second)  <br /></td></tr>
-<tr class="separator:a29113c12994fab96ebaf5912e30d306b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afb6c2a89b5407603e1d3adb291a88d43"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classslou_1_1Logger.html#afb6c2a89b5407603e1d3adb291a88d43">logToFile</a></td></tr>
-<tr class="memdesc:afb6c2a89b5407603e1d3adb291a88d43"><td class="mdescLeft">&#160;</td><td class="mdescRight">Should the logger put logs to a file. (defaults to "true")  <br /></td></tr>
-<tr class="separator:afb6c2a89b5407603e1d3adb291a88d43"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a554a3885f6ceaa0f787f916c1911f666"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classslou_1_1Logger.html#a554a3885f6ceaa0f787f916c1911f666">logToScreen</a></td></tr>
-<tr class="memdesc:a554a3885f6ceaa0f787f916c1911f666"><td class="mdescLeft">&#160;</td><td class="mdescRight">Should the logger display logs to a screen. (defaults to "false")  <br /></td></tr>
-<tr class="separator:a554a3885f6ceaa0f787f916c1911f666"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ada99d57909b9c7a7b3af3d6340428451"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classslou_1_1Logger.html#ada99d57909b9c7a7b3af3d6340428451">logFilename</a></td></tr>
-<tr class="memdesc:ada99d57909b9c7a7b3af3d6340428451"><td class="mdescLeft">&#160;</td><td class="mdescRight">Path and name of the log file. (defaults to "slou.log")  <br /></td></tr>
-<tr class="separator:ada99d57909b9c7a7b3af3d6340428451"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a75be3b597646c49f7434bd3ad402c9a8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classslou_1_1Logger.html#a75be3b597646c49f7434bd3ad402c9a8">colorTerminalOutput</a> = true</td></tr>
-<tr class="memdesc:a75be3b597646c49f7434bd3ad402c9a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Should logs in the terminal be colored. (defaults to "true")  <br /></td></tr>
+<tr class="memdesc:a75be3b597646c49f7434bd3ad402c9a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Should logs in the terminal be colored.  <br /></td></tr>
 <tr class="separator:a75be3b597646c49f7434bd3ad402c9a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
-<tr class="memitem:a25c01015ff6f2fe6e9e62cd1150d7239"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classslou_1_1Logger.html#a25c01015ff6f2fe6e9e62cd1150d7239">CurrentDateAndTime</a> (const char *<a class="el" href="classslou_1_1Logger.html#a29113c12994fab96ebaf5912e30d306b">timeFormat</a>)</td></tr>
+<tr class="memitem:a25c01015ff6f2fe6e9e62cd1150d7239"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classslou_1_1Logger.html#a25c01015ff6f2fe6e9e62cd1150d7239">CurrentDateAndTime</a> (const char *<a class="el" href="classslou_1_1Logger.html#a3a777e8f8ae7a02f90704be57fb1d535">timeFormat</a>)</td></tr>
 <tr class="memdesc:a25c01015ff6f2fe6e9e62cd1150d7239"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function gets the current date and time and displays it in the format passed to the variable.  <br /></td></tr>
 <tr class="separator:a25c01015ff6f2fe6e9e62cd1150d7239"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a944a3f3d8b1ba47cbbefe67aced6e568"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classslou_1_1Logger.html#a944a3f3d8b1ba47cbbefe67aced6e568">Format</a> (std::string format)</td></tr>
+<tr class="memitem:a944a3f3d8b1ba47cbbefe67aced6e568"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classslou_1_1Logger.html#a944a3f3d8b1ba47cbbefe67aced6e568">Format</a> (std::string <a class="el" href="classslou_1_1Logger.html#a6400e192508290201a4fcef66afbcb52">format</a>)</td></tr>
 <tr class="memdesc:a944a3f3d8b1ba47cbbefe67aced6e568"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function finds strings in a custom format and replaces them with variable values.  <br /></td></tr>
 <tr class="separator:a944a3f3d8b1ba47cbbefe67aced6e568"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -198,6 +201,24 @@ Private Attributes</h2></td></tr>
 <tr class="memitem:ab57dbb191b277eb8d0b54c09da622483"><td class="memItemLeft" align="right" valign="top">std::fstream&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classslou_1_1Logger.html#ab57dbb191b277eb8d0b54c09da622483">logFile</a></td></tr>
 <tr class="memdesc:ab57dbb191b277eb8d0b54c09da622483"><td class="mdescLeft">&#160;</td><td class="mdescRight">The file used for logging.  <br /></td></tr>
 <tr class="separator:ab57dbb191b277eb8d0b54c09da622483"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f48b458e86747822d1c5fa19390db0e"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classslou_1_1Logger.html#a1f48b458e86747822d1c5fa19390db0e">_projectName</a></td></tr>
+<tr class="memdesc:a1f48b458e86747822d1c5fa19390db0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Name of your project.  <br /></td></tr>
+<tr class="separator:a1f48b458e86747822d1c5fa19390db0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a306a3266c5328541d5347e39609f786f"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classslou_1_1Logger.html#a306a3266c5328541d5347e39609f786f">_timeFormat</a></td></tr>
+<tr class="memdesc:a306a3266c5328541d5347e39609f786f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Date and/or time format.  <br /></td></tr>
+<tr class="separator:a306a3266c5328541d5347e39609f786f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa57f3ae97cff2bf1dbc2442b461dc91a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classslou_1_1Logger.html#aa57f3ae97cff2bf1dbc2442b461dc91a">_logToFile</a></td></tr>
+<tr class="memdesc:aa57f3ae97cff2bf1dbc2442b461dc91a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Should the logger put logs to a file.  <br /></td></tr>
+<tr class="separator:aa57f3ae97cff2bf1dbc2442b461dc91a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7452433e4aca9a1dc579bc6b79e5673d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classslou_1_1Logger.html#a7452433e4aca9a1dc579bc6b79e5673d">_logToScreen</a></td></tr>
+<tr class="memdesc:a7452433e4aca9a1dc579bc6b79e5673d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Should the logger display logs to a screen.  <br /></td></tr>
+<tr class="separator:a7452433e4aca9a1dc579bc6b79e5673d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90c51a551870a217b2a7473cb1fc6f09"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classslou_1_1Logger.html#a90c51a551870a217b2a7473cb1fc6f09">_logFilename</a></td></tr>
+<tr class="memdesc:a90c51a551870a217b2a7473cb1fc6f09"><td class="mdescLeft">&#160;</td><td class="mdescRight">Path and name of the log file.  <br /></td></tr>
+<tr class="separator:a90c51a551870a217b2a7473cb1fc6f09"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a912c52bfe0f3e8a784402ea4ed1b9c6c"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classslou_1_1Logger.html#a912c52bfe0f3e8a784402ea4ed1b9c6c">_moduleName</a></td></tr>
+<tr class="memdesc:a912c52bfe0f3e8a784402ea4ed1b9c6c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Name of your module. (in other words, your class or something else, e.g. "CORE", "UTILS", "RENDERER". Can also be lowercase)  <br /></td></tr>
+<tr class="separator:a912c52bfe0f3e8a784402ea4ed1b9c6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aafe368edb30aa2c2f27c143dec4f6a0c"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classslou_1_1Logger.html#aafe368edb30aa2c2f27c143dec4f6a0c">_format</a></td></tr>
 <tr class="memdesc:aafe368edb30aa2c2f27c143dec4f6a0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Custom log format.  <br /></td></tr>
 <tr class="separator:aafe368edb30aa2c2f27c143dec4f6a0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -213,8 +234,8 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="slou_8hpp_source.html#l00028">28</a> of file <a class="el" href="slou_8hpp_source.html">slou.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="aabac713f54f720337d2bcd63e3ee1813" name="aabac713f54f720337d2bcd63e3ee1813"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aabac713f54f720337d2bcd63e3ee1813">&#9670;&#160;</a></span>Logger()</h2>
+<a id="ac17c6ca9227fb99540304c2c19462e2a" name="ac17c6ca9227fb99540304c2c19462e2a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac17c6ca9227fb99540304c2c19462e2a">&#9670;&#160;</a></span>Logger()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -226,42 +247,8 @@ Private Attributes</h2></td></tr>
           <td class="memname">slou::Logger::Logger </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>projectName</em> = <code>&quot;slou&quot;</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramname"><em>projectName</em> = <code>&quot;slou&quot;</code></td><td>)</td>
           <td></td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>timeFormat</em> = <code>&quot;%X&quot;</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>logToFile</em> = <code>true</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>logToScreen</em> = <code>false</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>logFilename</em> = <code>&quot;slou.log&quot;</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>format</em> = <code>&quot;{projectName}&#160;-&#160;[{level}]&#160;({time}):&#160;{message}&quot;</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -273,20 +260,14 @@ Private Attributes</h2></td></tr>
 
 <p>Default <a class="el" href="classslou_1_1Logger.html" title="Class creates the logger that logs everything to the screen and/or file.">Logger</a> class constructor that initializes all passed in variables for use. </p>
 <p>The constructor checks if the log file exists and if it does, the constructor removes the file.</p>
-<p>For more ways of formatting date and time, check out: <a href="https://en.cppreference.com/w/cpp/io/manip/put_time">https://en.cppreference.com/w/cpp/io/manip/put_time</a></p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">projectName</td><td>constant reference to a string representing the project name. (defaults to "slou") </td></tr>
-    <tr><td class="paramname">timeFormat</td><td>constant character pointer representing the date and/or time format. (defaults to "%X" which is the localized time representation, meaning the current hour, minute and second, locale dependent) </td></tr>
-    <tr><td class="paramname">logToFile</td><td>boolean representing the need to log to a file. (defaults to "true") </td></tr>
-    <tr><td class="paramname">logToScreen</td><td>boolean representing the need to log to the screen. (defaults to "false") </td></tr>
-    <tr><td class="paramname">logFilename</td><td>constant reference to a string representing the path and name of the log file. (defaults to "slou.log") </td></tr>
-    <tr><td class="paramname">format</td><td>constant reference to a string representing the custom log format. (defaults to "{projectName} - [{level}] ({time}): {message}") </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="slou_8cpp_source.html#l00031">31</a> of file <a class="el" href="slou_8cpp_source.html">slou.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="slou_8cpp_source.html#l00024">24</a> of file <a class="el" href="slou_8cpp_source.html">slou.cpp</a>.</p>
 
 </div>
 </div>
@@ -308,7 +289,7 @@ Private Attributes</h2></td></tr>
 <p>Default <a class="el" href="classslou_1_1Logger.html" title="Class creates the logger that logs everything to the screen and/or file.">Logger</a> class deconstructor. </p>
 <p>The deconstructor does nothing. </p>
 
-<p class="definition">Definition at line <a class="el" href="slou_8cpp_source.html#l00047">47</a> of file <a class="el" href="slou_8cpp_source.html">slou.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="slou_8cpp_source.html#l00041">41</a> of file <a class="el" href="slou_8cpp_source.html">slou.cpp</a>.</p>
 
 </div>
 </div>
@@ -345,7 +326,35 @@ Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="slou_8cpp_source.html#l00091">91</a> of file <a class="el" href="slou_8cpp_source.html">slou.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="slou_8cpp_source.html#l00129">129</a> of file <a class="el" href="slou_8cpp_source.html">slou.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a6400e192508290201a4fcef66afbcb52" name="a6400e192508290201a4fcef66afbcb52"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6400e192508290201a4fcef66afbcb52">&#9670;&#160;</a></span>format()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classslou_1_1Logger.html">Logger</a> &amp; slou::Logger::format </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>format</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Changes the log format. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">format</td><td>constant reference to a string representing the custom log format. (defaults to "{projectName} - [{moduleName} | {level}] ({time}): {message}") </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="slou_8cpp_source.html#l00084">84</a> of file <a class="el" href="slou_8cpp_source.html">slou.cpp</a>.</p>
 
 </div>
 </div>
@@ -379,6 +388,7 @@ Private Attributes</h2></td></tr>
 <li>{level} - replaced for private level variable</li>
 <li>{time} - replaced for timeFormat variable</li>
 <li>{message} - replaced for private message variable</li>
+<li>{moduleName} - replaced for moduleName variable</li>
 </ul>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -387,7 +397,7 @@ Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="slou_8cpp_source.html#l00119">119</a> of file <a class="el" href="slou_8cpp_source.html">slou.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="slou_8cpp_source.html#l00158">158</a> of file <a class="el" href="slou_8cpp_source.html">slou.cpp</a>.</p>
 
 </div>
 </div>
@@ -426,7 +436,148 @@ Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="slou_8cpp_source.html#l00054">54</a> of file <a class="el" href="slou_8cpp_source.html">slou.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="slou_8cpp_source.html#l00092">92</a> of file <a class="el" href="slou_8cpp_source.html">slou.cpp</a>.</p>
+
+</div>
+</div>
+<a id="aa66903423b41ea537ccfbf2d88f3b07d" name="aa66903423b41ea537ccfbf2d88f3b07d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa66903423b41ea537ccfbf2d88f3b07d">&#9670;&#160;</a></span>logFilename()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classslou_1_1Logger.html">Logger</a> &amp; slou::Logger::logFilename </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>logFilename</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Changes the log file path and name. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">logFilename</td><td>constant reference to a string representing the path and name of the log file. (defaults to "slou.log") </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="slou_8cpp_source.html#l00077">77</a> of file <a class="el" href="slou_8cpp_source.html">slou.cpp</a>.</p>
+
+</div>
+</div>
+<a id="aeb486d48be1196195f0f304e58e43fe5" name="aeb486d48be1196195f0f304e58e43fe5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb486d48be1196195f0f304e58e43fe5">&#9670;&#160;</a></span>logToFile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classslou_1_1Logger.html">Logger</a> &amp; slou::Logger::logToFile </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>logToFile</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Changes whether the logs should be saved to a file. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">logToFile</td><td>boolean representing the need to log to a file. (defaults to "true") </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="slou_8cpp_source.html#l00063">63</a> of file <a class="el" href="slou_8cpp_source.html">slou.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a67898c0450f5fd760b78f4654765ad5a" name="a67898c0450f5fd760b78f4654765ad5a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a67898c0450f5fd760b78f4654765ad5a">&#9670;&#160;</a></span>logToScreen()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classslou_1_1Logger.html">Logger</a> &amp; slou::Logger::logToScreen </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>logToScreen</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Changes whether the logs should be displayed in the terminal. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">logToScreen</td><td>boolean representing the need to log to the screen. (defaults to "false") </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="slou_8cpp_source.html#l00070">70</a> of file <a class="el" href="slou_8cpp_source.html">slou.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a9f212bc9b1aa43d115edbf8062636ce8" name="a9f212bc9b1aa43d115edbf8062636ce8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f212bc9b1aa43d115edbf8062636ce8">&#9670;&#160;</a></span>moduleName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classslou_1_1Logger.html">Logger</a> &amp; slou::Logger::moduleName </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>moduleName</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Changes the name of your module (e.g. class name). </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">moduleName</td><td>constant reference to a string representing the name of your module (e.g. class name). (defaults to "main") </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="slou_8cpp_source.html#l00047">47</a> of file <a class="el" href="slou_8cpp_source.html">slou.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a3a777e8f8ae7a02f90704be57fb1d535" name="a3a777e8f8ae7a02f90704be57fb1d535"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a777e8f8ae7a02f90704be57fb1d535">&#9670;&#160;</a></span>timeFormat()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classslou_1_1Logger.html">Logger</a> &amp; slou::Logger::timeFormat </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>timeFormat</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Changes the time format. </p>
+<p>For more ways of formatting date and time, check out: <a href="https://en.cppreference.com/w/cpp/io/manip/put_time">https://en.cppreference.com/w/cpp/io/manip/put_time</a></p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">timeFormat</td><td>constant character pointer representing the date and/or time format. (defaults to "%X" which is the localized time representation, meaning the current hour, minute and second, locale dependent) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="slou_8cpp_source.html#l00056">56</a> of file <a class="el" href="slou_8cpp_source.html">slou.cpp</a>.</p>
 
 </div>
 </div>
@@ -453,7 +604,7 @@ Private Attributes</h2></td></tr>
 
 <p>Custom log format. </p>
 
-<p class="definition">Definition at line <a class="el" href="slou_8hpp_source.html#l00065">65</a> of file <a class="el" href="slou_8hpp_source.html">slou.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="slou_8hpp_source.html#l00072">72</a> of file <a class="el" href="slou_8hpp_source.html">slou.hpp</a>.</p>
 
 </div>
 </div>
@@ -479,7 +630,85 @@ Private Attributes</h2></td></tr>
 
 <p>Log level. </p>
 
-<p class="definition">Definition at line <a class="el" href="slou_8hpp_source.html#l00066">66</a> of file <a class="el" href="slou_8hpp_source.html">slou.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="slou_8hpp_source.html#l00073">73</a> of file <a class="el" href="slou_8hpp_source.html">slou.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a90c51a551870a217b2a7473cb1fc6f09" name="a90c51a551870a217b2a7473cb1fc6f09"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a90c51a551870a217b2a7473cb1fc6f09">&#9670;&#160;</a></span>_logFilename</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string slou::Logger::_logFilename</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Path and name of the log file. </p>
+
+<p class="definition">Definition at line <a class="el" href="slou_8hpp_source.html#l00070">70</a> of file <a class="el" href="slou_8hpp_source.html">slou.hpp</a>.</p>
+
+</div>
+</div>
+<a id="aa57f3ae97cff2bf1dbc2442b461dc91a" name="aa57f3ae97cff2bf1dbc2442b461dc91a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa57f3ae97cff2bf1dbc2442b461dc91a">&#9670;&#160;</a></span>_logToFile</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool slou::Logger::_logToFile</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Should the logger put logs to a file. </p>
+
+<p class="definition">Definition at line <a class="el" href="slou_8hpp_source.html#l00067">67</a> of file <a class="el" href="slou_8hpp_source.html">slou.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a7452433e4aca9a1dc579bc6b79e5673d" name="a7452433e4aca9a1dc579bc6b79e5673d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7452433e4aca9a1dc579bc6b79e5673d">&#9670;&#160;</a></span>_logToScreen</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool slou::Logger::_logToScreen</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Should the logger display logs to a screen. </p>
+
+<p class="definition">Definition at line <a class="el" href="slou_8hpp_source.html#l00068">68</a> of file <a class="el" href="slou_8hpp_source.html">slou.hpp</a>.</p>
 
 </div>
 </div>
@@ -505,7 +734,85 @@ Private Attributes</h2></td></tr>
 
 <p>Log message. </p>
 
-<p class="definition">Definition at line <a class="el" href="slou_8hpp_source.html#l00067">67</a> of file <a class="el" href="slou_8hpp_source.html">slou.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="slou_8hpp_source.html#l00074">74</a> of file <a class="el" href="slou_8hpp_source.html">slou.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a912c52bfe0f3e8a784402ea4ed1b9c6c" name="a912c52bfe0f3e8a784402ea4ed1b9c6c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a912c52bfe0f3e8a784402ea4ed1b9c6c">&#9670;&#160;</a></span>_moduleName</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string slou::Logger::_moduleName</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Name of your module. (in other words, your class or something else, e.g. "CORE", "UTILS", "RENDERER". Can also be lowercase) </p>
+
+<p class="definition">Definition at line <a class="el" href="slou_8hpp_source.html#l00071">71</a> of file <a class="el" href="slou_8hpp_source.html">slou.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a1f48b458e86747822d1c5fa19390db0e" name="a1f48b458e86747822d1c5fa19390db0e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f48b458e86747822d1c5fa19390db0e">&#9670;&#160;</a></span>_projectName</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string slou::Logger::_projectName</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Name of your project. </p>
+
+<p class="definition">Definition at line <a class="el" href="slou_8hpp_source.html#l00063">63</a> of file <a class="el" href="slou_8hpp_source.html">slou.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a306a3266c5328541d5347e39609f786f" name="a306a3266c5328541d5347e39609f786f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a306a3266c5328541d5347e39609f786f">&#9670;&#160;</a></span>_timeFormat</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char* slou::Logger::_timeFormat</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Date and/or time format. </p>
+
+<p class="definition">Definition at line <a class="el" href="slou_8hpp_source.html#l00065">65</a> of file <a class="el" href="slou_8hpp_source.html">slou.hpp</a>.</p>
 
 </div>
 </div>
@@ -521,9 +828,9 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Should logs in the terminal be colored. (defaults to "true") </p>
+<p>Should logs in the terminal be colored. </p>
 
-<p class="definition">Definition at line <a class="el" href="slou_8hpp_source.html#l00051">51</a> of file <a class="el" href="slou_8hpp_source.html">slou.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="slou_8hpp_source.html#l00049">49</a> of file <a class="el" href="slou_8hpp_source.html">slou.hpp</a>.</p>
 
 </div>
 </div>
@@ -541,7 +848,7 @@ Private Attributes</h2></td></tr>
 
 <p>Critical level indicates that there's something wrong with the program and requires immediate attention. </p>
 
-<p class="definition">Definition at line <a class="el" href="slou_8hpp_source.html#l00040">40</a> of file <a class="el" href="slou_8hpp_source.html">slou.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="slou_8hpp_source.html#l00047">47</a> of file <a class="el" href="slou_8hpp_source.html">slou.hpp</a>.</p>
 
 </div>
 </div>
@@ -559,7 +866,7 @@ Private Attributes</h2></td></tr>
 
 <p>Error level indicates that there's something wrong with the program requires attention. </p>
 
-<p class="definition">Definition at line <a class="el" href="slou_8hpp_source.html#l00039">39</a> of file <a class="el" href="slou_8hpp_source.html">slou.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="slou_8hpp_source.html#l00046">46</a> of file <a class="el" href="slou_8hpp_source.html">slou.hpp</a>.</p>
 
 </div>
 </div>
@@ -585,7 +892,7 @@ Private Attributes</h2></td></tr>
 
 <p>Green color paints output green. Used when something is successful. </p>
 
-<p class="definition">Definition at line <a class="el" href="slou_8hpp_source.html#l00058">58</a> of file <a class="el" href="slou_8hpp_source.html">slou.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="slou_8hpp_source.html#l00056">56</a> of file <a class="el" href="slou_8hpp_source.html">slou.hpp</a>.</p>
 
 </div>
 </div>
@@ -603,7 +910,7 @@ Private Attributes</h2></td></tr>
 
 <p>Info level displays basic information. </p>
 
-<p class="definition">Definition at line <a class="el" href="slou_8hpp_source.html#l00037">37</a> of file <a class="el" href="slou_8hpp_source.html">slou.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="slou_8hpp_source.html#l00044">44</a> of file <a class="el" href="slou_8hpp_source.html">slou.hpp</a>.</p>
 
 </div>
 </div>
@@ -629,7 +936,7 @@ Private Attributes</h2></td></tr>
 
 <p>Light red color paints output light red. Used in errors. </p>
 
-<p class="definition">Definition at line <a class="el" href="slou_8hpp_source.html#l00060">60</a> of file <a class="el" href="slou_8hpp_source.html">slou.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="slou_8hpp_source.html#l00058">58</a> of file <a class="el" href="slou_8hpp_source.html">slou.hpp</a>.</p>
 
 </div>
 </div>
@@ -655,7 +962,7 @@ Private Attributes</h2></td></tr>
 
 <p>Light yellow color paints output light yellow. Used in warnings. </p>
 
-<p class="definition">Definition at line <a class="el" href="slou_8hpp_source.html#l00061">61</a> of file <a class="el" href="slou_8hpp_source.html">slou.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="slou_8hpp_source.html#l00059">59</a> of file <a class="el" href="slou_8hpp_source.html">slou.hpp</a>.</p>
 
 </div>
 </div>
@@ -681,79 +988,7 @@ Private Attributes</h2></td></tr>
 
 <p>The file used for logging. </p>
 
-<p class="definition">Definition at line <a class="el" href="slou_8hpp_source.html#l00063">63</a> of file <a class="el" href="slou_8hpp_source.html">slou.hpp</a>.</p>
-
-</div>
-</div>
-<a id="ada99d57909b9c7a7b3af3d6340428451" name="ada99d57909b9c7a7b3af3d6340428451"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ada99d57909b9c7a7b3af3d6340428451">&#9670;&#160;</a></span>logFilename</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::string slou::Logger::logFilename</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Path and name of the log file. (defaults to "slou.log") </p>
-
-<p class="definition">Definition at line <a class="el" href="slou_8hpp_source.html#l00049">49</a> of file <a class="el" href="slou_8hpp_source.html">slou.hpp</a>.</p>
-
-</div>
-</div>
-<a id="afb6c2a89b5407603e1d3adb291a88d43" name="afb6c2a89b5407603e1d3adb291a88d43"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afb6c2a89b5407603e1d3adb291a88d43">&#9670;&#160;</a></span>logToFile</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool slou::Logger::logToFile</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Should the logger put logs to a file. (defaults to "true") </p>
-
-<p class="definition">Definition at line <a class="el" href="slou_8hpp_source.html#l00046">46</a> of file <a class="el" href="slou_8hpp_source.html">slou.hpp</a>.</p>
-
-</div>
-</div>
-<a id="a554a3885f6ceaa0f787f916c1911f666" name="a554a3885f6ceaa0f787f916c1911f666"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a554a3885f6ceaa0f787f916c1911f666">&#9670;&#160;</a></span>logToScreen</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool slou::Logger::logToScreen</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Should the logger display logs to a screen. (defaults to "false") </p>
-
-<p class="definition">Definition at line <a class="el" href="slou_8hpp_source.html#l00047">47</a> of file <a class="el" href="slou_8hpp_source.html">slou.hpp</a>.</p>
-
-</div>
-</div>
-<a id="afd292eba853b682e93a7c75e87682c62" name="afd292eba853b682e93a7c75e87682c62"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afd292eba853b682e93a7c75e87682c62">&#9670;&#160;</a></span>projectName</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::string slou::Logger::projectName</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Name of your project. (defaults to "slou") </p>
-
-<p class="definition">Definition at line <a class="el" href="slou_8hpp_source.html#l00042">42</a> of file <a class="el" href="slou_8hpp_source.html">slou.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="slou_8hpp_source.html#l00061">61</a> of file <a class="el" href="slou_8hpp_source.html">slou.hpp</a>.</p>
 
 </div>
 </div>
@@ -779,7 +1014,7 @@ Private Attributes</h2></td></tr>
 
 <p>Red color paints output red. Used in critical errors. </p>
 
-<p class="definition">Definition at line <a class="el" href="slou_8hpp_source.html#l00057">57</a> of file <a class="el" href="slou_8hpp_source.html">slou.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="slou_8hpp_source.html#l00055">55</a> of file <a class="el" href="slou_8hpp_source.html">slou.hpp</a>.</p>
 
 </div>
 </div>
@@ -805,7 +1040,7 @@ Private Attributes</h2></td></tr>
 
 <p>Reset color resets all of the colors to the terminal default. </p>
 
-<p class="definition">Definition at line <a class="el" href="slou_8hpp_source.html#l00056">56</a> of file <a class="el" href="slou_8hpp_source.html">slou.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="slou_8hpp_source.html#l00054">54</a> of file <a class="el" href="slou_8hpp_source.html">slou.hpp</a>.</p>
 
 </div>
 </div>
@@ -823,25 +1058,7 @@ Private Attributes</h2></td></tr>
 
 <p>Success level indicates that an operation was successful. </p>
 
-<p class="definition">Definition at line <a class="el" href="slou_8hpp_source.html#l00036">36</a> of file <a class="el" href="slou_8hpp_source.html">slou.hpp</a>.</p>
-
-</div>
-</div>
-<a id="a29113c12994fab96ebaf5912e30d306b" name="a29113c12994fab96ebaf5912e30d306b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a29113c12994fab96ebaf5912e30d306b">&#9670;&#160;</a></span>timeFormat</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const char* slou::Logger::timeFormat</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Date and/or time format. (defaults to "%X", which means the current hour, minute and second) </p>
-
-<p class="definition">Definition at line <a class="el" href="slou_8hpp_source.html#l00044">44</a> of file <a class="el" href="slou_8hpp_source.html">slou.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="slou_8hpp_source.html#l00043">43</a> of file <a class="el" href="slou_8hpp_source.html">slou.hpp</a>.</p>
 
 </div>
 </div>
@@ -859,7 +1076,7 @@ Private Attributes</h2></td></tr>
 
 <p>Warning level indicates that there's something wrong with the program but doesn't require immediate attention. </p>
 
-<p class="definition">Definition at line <a class="el" href="slou_8hpp_source.html#l00038">38</a> of file <a class="el" href="slou_8hpp_source.html">slou.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="slou_8hpp_source.html#l00045">45</a> of file <a class="el" href="slou_8hpp_source.html">slou.hpp</a>.</p>
 
 </div>
 </div>
@@ -885,7 +1102,7 @@ Private Attributes</h2></td></tr>
 
 <p>White color paints output white. Used when displaying basic information. </p>
 
-<p class="definition">Definition at line <a class="el" href="slou_8hpp_source.html#l00059">59</a> of file <a class="el" href="slou_8hpp_source.html">slou.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="slou_8hpp_source.html#l00057">57</a> of file <a class="el" href="slou_8hpp_source.html">slou.hpp</a>.</p>
 
 </div>
 </div>
@@ -899,7 +1116,7 @@ Private Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceslou.html">slou</a></li><li class="navelem"><a class="el" href="classslou_1_1Logger.html">Logger</a></li>
-    <li class="footer">Generated on Sun Mar 19 2023 15:56:11 for slou by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+    <li class="footer">Generated on Tue Mar 21 2023 23:56:45 for slou by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
   </ul>
 </div>
 </body>

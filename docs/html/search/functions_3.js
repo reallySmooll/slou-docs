@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['_7elogger_0',['~Logger',['../classslou_1_1Logger.html#ad7bd8a3cf48516ac814ba27ac6c70fb4',1,'slou::Logger']]]
+  ['modulename_0',['moduleName',['../classslou_1_1Logger.html#a9f212bc9b1aa43d115edbf8062636ce8',1,'slou::Logger']]]
 ];

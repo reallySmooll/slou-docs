@@ -38,7 +38,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">slou<span id="projectnumber">&#160;v1.1.1</span>
+   <div id="projectname">slou<span id="projectnumber">&#160;v1.2.0</span>
    </div>
    <div id="projectbrief">&quot;Smooll&quot; LOgging Utility</div>
   </td>
@@ -107,7 +107,8 @@ $(document).ready(function(){initNavTree('md_USAGE.html',''); initResizable(); }
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p>This file explains ways of configuration for slou or new features that have been added in the latest release.</p>
-<h1><a class="anchor" id="autotoc_md47"></a>
+<p><b>NOTE: This documentation uses version &gt;=1.2.0.</b></p>
+<h1><a class="anchor" id="autotoc_md48"></a>
 Custom formatting</h1>
 <p>As of version <code>1.1.0</code>, slou supports custom formatting similar in use to the Python <code>logging</code> library.</p>
 <p>There are four variables you can use to customize your log format:</p>
@@ -116,16 +117,19 @@ Custom formatting</h1>
 <li><code>{level}</code> - Severity level</li>
 <li><code>{time}</code> - Date and/or time</li>
 <li><code>{message}</code> - Your log message</li>
+<li><code>{moduleName}</code> - Your module name (e.g. class name). New as of <code>v1.2.0</code></li>
 </ul>
 <p>To customize your format, you need to add it as a constructor argument:</p>
 <div class="fragment"><div class="line"><span class="preprocessor">#include &lt;slou/slou.hpp&gt;</span></div>
 <div class="line"> </div>
 <div class="line"><span class="keywordtype">int</span> main()</div>
 <div class="line">{</div>
-<div class="line">    <span class="comment">// You can create a new variable with your custom format, or pass it directly to the constructor.</span></div>
+<div class="line">    <span class="comment">// You can create a new variable with your custom format, or pass it directly to the format() function.</span></div>
 <div class="line">    std::string format = <span class="stringliteral">&quot;{projectName} - [{level}] ({time}): {message}&quot;</span>;</div>
 <div class="line"> </div>
-<div class="line">    <a class="code hl_class" href="classslou_1_1Logger.html">slou::Logger</a> logger(<span class="stringliteral">&quot;slou&quot;</span>, <span class="stringliteral">&quot;%X&quot;</span>, <span class="keyword">true</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;slou.log&quot;</span>, format);</div>
+<div class="line">    <a class="code hl_class" href="classslou_1_1Logger.html">slou::Logger</a> logger(<span class="stringliteral">&quot;slou&quot;</span>);</div>
+<div class="line"> </div>
+<div class="line">    logger.format(format); <span class="comment">// This function is new as of v1.2.0</span></div>
 <div class="line"> </div>
 <div class="line">    logger.Log(logger.INFO, <span class="stringliteral">&quot;Hello, world!&quot;</span>);</div>
 <div class="line"> </div>
@@ -139,14 +143,16 @@ Custom formatting</h1>
 </div><!-- fragment --><p>The <code>format</code> variable would look something like this:</p>
 <div class="fragment"><div class="line">std::string format = <span class="stringliteral">&quot;{projectName} - [{level}]: {message}&quot;</span>;</div>
 </div><!-- fragment --><p>And that's all you need to know to format your logs however you like. Happy formatting! :)</p>
-<h1><a class="anchor" id="autotoc_md48"></a>
+<h1><a class="anchor" id="autotoc_md49"></a>
 Coloring terminal output</h1>
 <p>As of version <code>v1.1.1</code>, you can decide whether you want to color terminal output or not. This is done using the <code>colorTerminalOutput</code> variable after you create an instance of The Logger.</p>
 <div class="fragment"><div class="line"><span class="preprocessor">#include &lt;slou/slou.hpp&gt;</span></div>
 <div class="line"> </div>
 <div class="line"><span class="keywordtype">int</span> main()</div>
 <div class="line">{</div>
-<div class="line">    <a class="code hl_class" href="classslou_1_1Logger.html">slou::Logger</a> logger(<span class="stringliteral">&quot;slou&quot;</span>, <span class="stringliteral">&quot;%X&quot;</span>, <span class="keyword">true</span>, <span class="keyword">true</span>);</div>
+<div class="line">    <a class="code hl_class" href="classslou_1_1Logger.html">slou::Logger</a> logger(<span class="stringliteral">&quot;slou&quot;</span>);</div>
+<div class="line"> </div>
+<div class="line">    logger.logToScreen(<span class="keyword">true</span>); <span class="comment">// This function is new as of v1.2.0</span></div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">// By default colorTerminalOutput is set to true.</span></div>
 <div class="line">    logger.colorTerminalOutput = <span class="keyword">true</span>;</div>
@@ -159,7 +165,7 @@ Coloring terminal output</h1>
 <p><img src="assets/images/colorTerminalOutput_true.png" alt="colorTerminalOutput set to true" class="inline"/></p>
 <p>If you set <code>colorTerminalOutput</code> to <code>false</code>, the following would be the terminal output:</p>
 <p><img src="assets/images/colorTerminalOutput_false.png" alt="colorTerminalOutput set to false" class="inline"/></p>
-<h1><a class="anchor" id="autotoc_md49"></a>
+<h1><a class="anchor" id="autotoc_md50"></a>
 Custom severity levels</h1>
 <p>Severity levels (like <code>SUCCESS</code> or <code>INFO</code>) are just strings containing text (like <code>SUCCESS</code> or <code>INFO</code>), which means you can customize and add your own severity levels.</p>
 <p>To do that, you can change the first argument in the <code>Log()</code> function:</p>
@@ -173,10 +179,10 @@ Custom severity levels</h1>
 <div class="line"> </div>
 <div class="line">    <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>
-<div class="ttc" id="aclassslou_1_1Logger_html_a295e9b766690bc20dc2663647f2eeaba"><div class="ttname"><a href="classslou_1_1Logger.html#a295e9b766690bc20dc2663647f2eeaba">slou::Logger::Log</a></div><div class="ttdeci">void Log(const std::string &amp;level, const std::string &amp;message)</div><div class="ttdoc">Function logs the passed in message variable to the terminal and/or a file.</div><div class="ttdef"><b>Definition:</b> <a href="slou_8cpp_source.html#l00054">slou.cpp:54</a></div></div>
+<div class="ttc" id="aclassslou_1_1Logger_html_a295e9b766690bc20dc2663647f2eeaba"><div class="ttname"><a href="classslou_1_1Logger.html#a295e9b766690bc20dc2663647f2eeaba">slou::Logger::Log</a></div><div class="ttdeci">void Log(const std::string &amp;level, const std::string &amp;message)</div><div class="ttdoc">Function logs the passed in message variable to the terminal and/or a file.</div><div class="ttdef"><b>Definition:</b> <a href="slou_8cpp_source.html#l00092">slou.cpp:92</a></div></div>
 </div><!-- fragment --><p>The resulting output would be:</p>
 <p><img src="assets/images/Custom_severity_level.png" alt="Custom severity level" class="inline"/></p>
-<h1><a class="anchor" id="autotoc_md50"></a>
+<h1><a class="anchor" id="autotoc_md51"></a>
 Changing time formatting</h1>
 <p>slou uses the <code>std::put_time()</code> function from the <code>iomanip</code> library.</p>
 <p>If you'd like to change the default formatting, you need to change the second constructor argument:</p>
@@ -184,36 +190,43 @@ Changing time formatting</h1>
 <div class="line"> </div>
 <div class="line"><span class="keywordtype">int</span> main()</div>
 <div class="line">{</div>
-<div class="line">    <a class="code hl_class" href="classslou_1_1Logger.html">slou::Logger</a> logger(<span class="stringliteral">&quot;slou&quot;</span>, <span class="stringliteral">&quot;%x&quot;</span>);</div>
+<div class="line">    <a class="code hl_class" href="classslou_1_1Logger.html">slou::Logger</a> logger(<span class="stringliteral">&quot;slou&quot;</span>);</div>
+<div class="line"> </div>
+<div class="line">    logger.<a class="code hl_function" href="classslou_1_1Logger.html#a3a777e8f8ae7a02f90704be57fb1d535">timeFormat</a>(<span class="stringliteral">&quot;%x&quot;</span>); <span class="comment">// This function is new as of v1.2.0</span></div>
 <div class="line"> </div>
 <div class="line">    logger.<a class="code hl_function" href="classslou_1_1Logger.html#a295e9b766690bc20dc2663647f2eeaba">Log</a>(logger.<a class="code hl_variable" href="classslou_1_1Logger.html#a05818b88d3110524bd2e729b3a039d85">INFO</a>, <span class="stringliteral">&quot;Hello, world!&quot;</span>);</div>
 <div class="line"> </div>
 <div class="line">    <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>
-<div class="ttc" id="aclassslou_1_1Logger_html_a05818b88d3110524bd2e729b3a039d85"><div class="ttname"><a href="classslou_1_1Logger.html#a05818b88d3110524bd2e729b3a039d85">slou::Logger::INFO</a></div><div class="ttdeci">const std::string INFO</div><div class="ttdoc">Info level displays basic information.</div><div class="ttdef"><b>Definition:</b> <a href="slou_8hpp_source.html#l00037">slou.hpp:37</a></div></div>
+<div class="ttc" id="aclassslou_1_1Logger_html_a05818b88d3110524bd2e729b3a039d85"><div class="ttname"><a href="classslou_1_1Logger.html#a05818b88d3110524bd2e729b3a039d85">slou::Logger::INFO</a></div><div class="ttdeci">const std::string INFO</div><div class="ttdoc">Info level displays basic information.</div><div class="ttdef"><b>Definition:</b> <a href="slou_8hpp_source.html#l00044">slou.hpp:44</a></div></div>
+<div class="ttc" id="aclassslou_1_1Logger_html_a3a777e8f8ae7a02f90704be57fb1d535"><div class="ttname"><a href="classslou_1_1Logger.html#a3a777e8f8ae7a02f90704be57fb1d535">slou::Logger::timeFormat</a></div><div class="ttdeci">Logger &amp; timeFormat(const char *timeFormat)</div><div class="ttdoc">Changes the time format.</div><div class="ttdef"><b>Definition:</b> <a href="slou_8cpp_source.html#l00056">slou.cpp:56</a></div></div>
 </div><!-- fragment --><p>In this example <code>X</code> has been changed to <code>x</code>, which instead of the current time, displays the current date:</p>
 <p>Time format set to <code>X</code>:</p>
 <p><img src="assets/images/Time_format_time.png" alt="Time formatting using the %X conversion specifier" class="inline"/></p>
 <p>Time format set to <code>x</code>:</p>
 <p><img src="assets/images/Time_format_date.png" alt="Time formatting using the %x conversion specifier" class="inline"/></p>
 <p>If you'd like to see more ways of formatting your date and/or time, visit <a href="https://en.cppreference.com/w/cpp/io/manip/put_time">https://en.cppreference.com/w/cpp/io/manip/put_time</a>.</p>
-<h1><a class="anchor" id="autotoc_md51"></a>
+<h1><a class="anchor" id="autotoc_md52"></a>
 Changing constructor arguments on the fly</h1>
-<p>The Logger's constructor does two jobs, checking if the log file exists and if it does, removing it so a new one can be created, and initializing the constructor arguments to variables you can change on the fly.</p>
+<p>The Logger's constructor does two jobs, checking if the log file exists and if it does, removing it so a new one can be created, and initializing the constructor argument (and default values) to variables you can change on the fly.</p>
 <p>Like for example the <code>logToFile</code> variable:</p>
 <div class="fragment"><div class="line"><span class="preprocessor">#include &lt;slou/slou.hpp&gt;</span></div>
 <div class="line"> </div>
 <div class="line"><span class="keywordtype">int</span> main()</div>
 <div class="line">{</div>
-<div class="line">    <a class="code hl_class" href="classslou_1_1Logger.html">slou::Logger</a> logger(<span class="stringliteral">&quot;slou&quot;</span>, <span class="stringliteral">&quot;%x&quot;</span>, <span class="keyword">true</span>, <span class="keyword">true</span>);</div>
+<div class="line">    <a class="code hl_class" href="classslou_1_1Logger.html">slou::Logger</a> logger(<span class="stringliteral">&quot;slou&quot;</span>);</div>
+<div class="line"> </div>
+<div class="line">    logger.<a class="code hl_function" href="classslou_1_1Logger.html#a67898c0450f5fd760b78f4654765ad5a">logToScreen</a>(<span class="keyword">true</span>); <span class="comment">// This function is new as of v1.2.0</span></div>
 <div class="line"> </div>
 <div class="line">    logger.<a class="code hl_function" href="classslou_1_1Logger.html#a295e9b766690bc20dc2663647f2eeaba">Log</a>(logger.<a class="code hl_variable" href="classslou_1_1Logger.html#a05818b88d3110524bd2e729b3a039d85">INFO</a>, <span class="stringliteral">&quot;This is being logged into the file!&quot;</span>);</div>
 <div class="line"> </div>
-<div class="line">    logger.<a class="code hl_variable" href="classslou_1_1Logger.html#afb6c2a89b5407603e1d3adb291a88d43">logToFile</a> = <span class="keyword">false</span>;</div>
+<div class="line">    logger.<a class="code hl_function" href="classslou_1_1Logger.html#aeb486d48be1196195f0f304e58e43fe5">logToFile</a>(<span class="keyword">false</span>); <span class="comment">// This function is new as of v1.2.0</span></div>
+<div class="line">    logger.<a class="code hl_function" href="classslou_1_1Logger.html#a3a777e8f8ae7a02f90704be57fb1d535">timeFormat</a>(<span class="stringliteral">&quot;%x&quot;</span>); <span class="comment">// This function is new as of v1.2.0</span></div>
 <div class="line"> </div>
 <div class="line">    logger.<a class="code hl_function" href="classslou_1_1Logger.html#a295e9b766690bc20dc2663647f2eeaba">Log</a>(logger.<a class="code hl_variable" href="classslou_1_1Logger.html#a05818b88d3110524bd2e729b3a039d85">INFO</a>, <span class="stringliteral">&quot;This isn&#39;t being logged into the file!&quot;</span>);</div>
 <div class="line">}</div>
-<div class="ttc" id="aclassslou_1_1Logger_html_afb6c2a89b5407603e1d3adb291a88d43"><div class="ttname"><a href="classslou_1_1Logger.html#afb6c2a89b5407603e1d3adb291a88d43">slou::Logger::logToFile</a></div><div class="ttdeci">bool logToFile</div><div class="ttdoc">Should the logger put logs to a file. (defaults to &quot;true&quot;)</div><div class="ttdef"><b>Definition:</b> <a href="slou_8hpp_source.html#l00046">slou.hpp:46</a></div></div>
+<div class="ttc" id="aclassslou_1_1Logger_html_a67898c0450f5fd760b78f4654765ad5a"><div class="ttname"><a href="classslou_1_1Logger.html#a67898c0450f5fd760b78f4654765ad5a">slou::Logger::logToScreen</a></div><div class="ttdeci">Logger &amp; logToScreen(bool logToScreen)</div><div class="ttdoc">Changes whether the logs should be displayed in the terminal.</div><div class="ttdef"><b>Definition:</b> <a href="slou_8cpp_source.html#l00070">slou.cpp:70</a></div></div>
+<div class="ttc" id="aclassslou_1_1Logger_html_aeb486d48be1196195f0f304e58e43fe5"><div class="ttname"><a href="classslou_1_1Logger.html#aeb486d48be1196195f0f304e58e43fe5">slou::Logger::logToFile</a></div><div class="ttdeci">Logger &amp; logToFile(bool logToFile)</div><div class="ttdoc">Changes whether the logs should be saved to a file.</div><div class="ttdef"><b>Definition:</b> <a href="slou_8cpp_source.html#l00063">slou.cpp:63</a></div></div>
 </div><!-- fragment --><p>This will result in the following output:</p>
 <p><img src="assets/images/logToFile_false.png" alt="logToFile set to false" class="inline"/></p>
 <p>Another example is the <code>logToScreen</code> variable:</p>
@@ -221,26 +234,25 @@ Changing constructor arguments on the fly</h1>
 <div class="line"> </div>
 <div class="line"><span class="keywordtype">int</span> main()</div>
 <div class="line">{</div>
-<div class="line">    <a class="code hl_class" href="classslou_1_1Logger.html">slou::Logger</a> logger(<span class="stringliteral">&quot;slou&quot;</span>, <span class="stringliteral">&quot;%x&quot;</span>, <span class="keyword">true</span>, <span class="keyword">true</span>);</div>
+<div class="line">    <a class="code hl_class" href="classslou_1_1Logger.html">slou::Logger</a> logger(<span class="stringliteral">&quot;slou&quot;</span>);</div>
+<div class="line"> </div>
+<div class="line">    logger.<a class="code hl_function" href="classslou_1_1Logger.html#a67898c0450f5fd760b78f4654765ad5a">logToScreen</a>(<span class="keyword">true</span>); <span class="comment">// This function is new as of v1.2.0</span></div>
 <div class="line"> </div>
 <div class="line">    logger.<a class="code hl_function" href="classslou_1_1Logger.html#a295e9b766690bc20dc2663647f2eeaba">Log</a>(logger.<a class="code hl_variable" href="classslou_1_1Logger.html#a05818b88d3110524bd2e729b3a039d85">INFO</a>, <span class="stringliteral">&quot;This is being logged onto the screen!&quot;</span>);</div>
 <div class="line"> </div>
-<div class="line">    logger.<a class="code hl_variable" href="classslou_1_1Logger.html#a554a3885f6ceaa0f787f916c1911f666">logToScreen</a> = <span class="keyword">false</span>;</div>
+<div class="line">    logger.<a class="code hl_function" href="classslou_1_1Logger.html#a67898c0450f5fd760b78f4654765ad5a">logToScreen</a>(<span class="keyword">false</span>); <span class="comment">// This function is new as of v1.2.0</span></div>
 <div class="line"> </div>
 <div class="line">    logger.<a class="code hl_function" href="classslou_1_1Logger.html#a295e9b766690bc20dc2663647f2eeaba">Log</a>(logger.<a class="code hl_variable" href="classslou_1_1Logger.html#a05818b88d3110524bd2e729b3a039d85">INFO</a>, <span class="stringliteral">&quot;This isn&#39;t being logged onto the screen!&quot;</span>);</div>
 <div class="line">}</div>
-<div class="ttc" id="aclassslou_1_1Logger_html_a554a3885f6ceaa0f787f916c1911f666"><div class="ttname"><a href="classslou_1_1Logger.html#a554a3885f6ceaa0f787f916c1911f666">slou::Logger::logToScreen</a></div><div class="ttdeci">bool logToScreen</div><div class="ttdoc">Should the logger display logs to a screen. (defaults to &quot;false&quot;)</div><div class="ttdef"><b>Definition:</b> <a href="slou_8hpp_source.html#l00047">slou.hpp:47</a></div></div>
 </div><!-- fragment --><p>The above code, after execution, will result in the following output:</p>
 <p><img src="assets/images/logToScreen_false.png" alt="logToScreen set to false" class="inline"/></p>
-<p>You can change every single one of the constructor arguments whenever you want.</p>
-<p><b>NOTE: Format is one exception, if you'd like to change the log format, you need to change it in the constructor, or change the format variable if you have one before you initialize The Logger. Check out the Custom formatting section above.</b> </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Sun Mar 19 2023 15:56:11 for slou by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+    <li class="footer">Generated on Tue Mar 21 2023 23:56:45 for slou by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
   </ul>
 </div>
 </body>
