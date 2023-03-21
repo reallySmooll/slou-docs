@@ -10,9 +10,9 @@ Documentation for slou.
 - man
 
 ## Generating documentation
-To generate the documentation you need to first clone the `slou` project repository and the `slou-docs` repository. After you've cloned it, you need to:
-
 ```bash
+$ git clone --recursive https://github.com/reallySmooll/slou.git
+$ git clone https://github.com/reallySmooll/slou-docs.git
 $ cd slou/
 $ doxygen
 $ cp -r docs/ ../slou-docs/
